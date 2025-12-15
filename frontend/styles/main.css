@@ -1,0 +1,901 @@
+body {
+    background-color: #CDE5D9; /* A nice light pistachio color */
+    color: #333; /* Default text color for the light background */
+    font-family: sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* This class will now be used on pages that need the background image */
+.has-background {
+    background-image: url('../images/yoga-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Text color for pages with the image */
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding-top: 50px;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 20, 0, 0.4); /* Optional: Adds a semi-transparent black overlay for readability */
+    color: white;
+    flex: 1;
+}
+
+/* Fix for pages without background */
+body:not(.has-background) main {
+    background: transparent;
+    color: #333;
+}
+
+/* New styles for the form container */
+.form-container {
+    background-color: white; /* White background for the form area */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* A nice, subtle shadow */
+    max-width: 600px;
+    margin: 40px auto; /* Centers the container on the page with spacing */
+    color: #333; /* Dark gray text color */
+    text-align: center;
+}
+
+/* General styling for headers within main section */
+main h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Styling the paragraph inside the form container */
+.form-container p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Styling the labels */
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px; /* Add some space between the label and input */
+    text-align: left; /* Aligns the label text to the left */
+}
+
+/* Styling the input fields */
+input[type="text"], input[type="number"] {
+    width: 90%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+/* Styling the button */
+button {
+    background-color: #4CAF50; /* A pleasant green color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adds a smooth transition on hover */
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 250px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+/* Styles for the new landing page content */
+.landing-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    flex: 1; /* Makes the main section fill the full screen height */
+    text-align: center;
+}
+
+.landing-page-content h2 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* Styles for the buttons */
+.cta-buttons .button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button.primary {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+}
+
+.button.primary:hover {
+    background-color: #45a049;
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.button.secondary:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+/* Styles for the new authentication page */
+.auth-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%; /* Responsive width */
+    color: #333;
+}
+
+.auth-container h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.auth-container p {
+    margin-bottom: 20px;
+}
+
+.auth-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-container input[type="email"], 
+.auth-container input[type="password"], 
+.auth-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* To include padding in the width calculation */
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d4e8ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+    background-color: #88c5a9;
+}
+
+.auth-links {
+    margin-top: 20px;
+}
+/* =================================================== */
+/* DASHBOARD PAGE STYLES (User-requested design)       */
+/* =================================================== */
+
+/* =================================================== */
+/* DASHBOARD PAGE STYLES (User-requested design)       */
+/* =================================================== */
+
+.profile-button-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.profile-button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+.profile-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dashboard-page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.dashboard-box {
+    background-color: #c0ebde ;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(222, 247, 190);
+    text-align: center;
+    text-decoration: none;
+}
+
+.dashboard-box h2{
+color: black;
+font-size: 25px;
+}
+
+.previous-recommendations-button {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #a8b497;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color:white;
+}
+
+/* Quick Stats Section */
+.quick-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-3px);
+}
+
+.stat-icon {
+    font-size: 2.5em;
+}
+
+.stat-info h3 {
+    color: #4CAF50;
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+}
+
+.stat-info p {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Box icons */
+.box-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.dashboard-box p {
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.dashboard-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Recommendations Page */
+.recommendation-page-content {
+    padding: 40px 20px;
+    min-height: auto;
+    flex: 1;
+}
+
+.recommendation-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.recommendation-container h2 {
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    color: #4CAF50;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.recommendation-container label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.recommendation-container input[type="number"],
+.recommendation-container select,
+.recommendation-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.recommendation-container input:focus,
+.recommendation-container select:focus,
+.recommendation-container textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Streaks Page */
+.streaks-page-content {
+    padding: 40px 20px;
+    min-height: auto;
+}
+
+.streaks-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.streak-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.streak-card:hover {
+    transform: translateY(-5px);
+}
+
+.streak-icon {
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+.streak-info h2 {
+    color: #4CAF50;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.streak-days {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.streak-label {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.calendar-section {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-section h3 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.activity-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    background: #f5f5f5;
+}
+
+.calendar-day.active {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.motivation-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.motivation-text {
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Reminders Page */
+.reminders-page-content {
+    padding: 40px 20px;
+    min-height: auto;
+}
+
+.reminders-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reminder-controls h2 {
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.reminder-controls p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.reminder-form {
+    margin-bottom: 40px;
+}
+
+.reminder-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.reminder-item:last-child {
+    border-bottom: none;
+}
+
+.reminder-item label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.reminder-item input[type="time"],
+.reminder-item select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.day-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.day-label {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.day-label:hover {
+    border-color: #4CAF50;
+}
+
+.day-label input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.day-label input[type="checkbox"]:checked + span {
+    color: #4CAF50;
+}
+
+.save-reminders-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active-reminders {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.active-reminders h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.reminder-display {
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+}
+
+.reminder-display div {
+    margin: 8px 0;
+    color: #333;
+}
+
+/* History Page */
+.history-page-content {
+    padding: 40px 20px;
+    min-height: auto;
+}
+
+.history-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.history-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.stat-item p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.filter-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 15px;
+}
+
+.filter-section select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.history-item:hover {
+    transform: translateX(5px);
+}
+
+.history-icon {
+    font-size: 3em;
+}
+
+.history-content h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.history-meta {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.history-description {
+    color: #666;
+    line-height: 1.5;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendation-container,
+    .reminders-container {
+        padding: 20px;
+    }
+
+    .streaks-container {
+        grid-template-columns: 1fr;
+    }
+
+    .history-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+    }
+
+    .day-selector {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}

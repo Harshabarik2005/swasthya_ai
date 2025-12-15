@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Reminders - Swasthya AI</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #a8edea, #fed6e3);
+      text-align: center;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    .reminder-container {
+      background: #fff;
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00a67e;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #555;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #00a67e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      cursor: pointer;
+      margin-top: 25px;
+      width: 100%;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #008b69;
+    }
+
+    .reminder-list {
+      margin-top: 30px;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+    }
+
+    .reminder-item {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 4px solid #00a67e;
+    }
+
+    .reminder-item .info {
+      font-size: 0.95rem;
+    }
+
+    .reminder-item .time {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .reminder-item .date {
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    .delete-btn {
+      background: #ff5252;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #fff;
+      color: #00a67e;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+
+  <div class="reminder-container">
+    <h2>⏰ Set Wellness Reminder</h2>
+    <form id="reminderForm">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" required>
+
+      <label for="activity">Select Activity:</label>
+      <select id="activity" required>
+        <option value="">Select activity</option>
+        <option value="Yoga Session">🧘 Yoga Session</option>
+        <option value="Exercise">🏋️ Exercise</option>
+        <option value="Meditation">🧘‍♀️ Meditation</option>
+        <option value="Drink Water">💧 Drink Water</option>
+        <option value="Take a Walk">🚶 Take a Walk</option>
+      </select>
+
+      <button type="submit">Set Reminder</button>
+    </form>
+
+    <div class="reminder-list">
+      <h3 style="color: #444; font-size: 1.1rem;">Upcoming Reminders</h3>
+      <div id="remindersList">
+        <p style="text-align: center; color: #888;">No reminders set.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Request notification permission on load
+    if ("Notification" in window) {
+      Notification.requestPermission();
+    }
+
+    const form = document.getElementById("reminderForm");
+    const remindersListEl = document.getElementById("remindersList");
+
+    // Load reminders on start
+    loadReminders();
+
+    // Listen for updates from other tabs/service
+    window.addEventListener('remindersUpdated', loadReminders);
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const activity = document.getElementById("activity").value;
+
+      // Validate date is not in past
+      const selectedDateTime = new Date(`${date}T${time}`);
+      if (selectedDateTime < new Date()) {
+        alert("Please select a future date and time.");
+        return;
+      }
+
+      const reminder = {
+        id: Date.now(),
+        date: date,
+        time: time,
+        activity: activity,
+        notified: false
+      };
+
+      saveReminder(reminder);
+      form.reset();
+      alert(`✅ Reminder set for ${activity} on ${date} at ${time}`);
+    });
+
+    function saveReminder(reminder) {
+      const reminders = JSON.parse(localStorage.getItem("wellness_reminders") || "[]");
+      reminders.push(reminder);
+      // Sort by time
+      reminders.sort((a, b) => new Date(`${a.date}T${a.time}`) - new Date(`${b.date}T${b.time}`));
+      localStorage.setItem("wellness_reminders", JSON.stringify(reminders));
+      loadReminders();
+    }
+
+    function loadReminders() {
+      const reminders = JSON.parse(localStorage.getItem("wellness_reminders") || "[]");
+
+      if (reminders.length === 0) {
+        remindersListEl.innerHTML = '<p style="text-align: center; color: #888;">No reminders set.</p>';
+        return;
+      }
+
+      remindersListEl.innerHTML = reminders.map(r => `
+        <div class="reminder-item">
+          <div class="info">
+            <div class="time">${formatTime(r.time)}</div>
+            <div class="date">${formatDate(r.date)}</div>
+            <div style="color: #00a67e; font-weight: 500;">${r.activity}</div>
+          </div>
+          <button class="delete-btn" onclick="deleteReminder(${r.id})">Delete</button>
+        </div>
+      `).join("");
+    }
+
+    window.deleteReminder = function (id) {
+      let reminders = JSON.parse(localStorage.getItem("wellness_reminders") || "[]");
+      reminders = reminders.filter(r => r.id !== id);
+      localStorage.setItem("wellness_reminders", JSON.stringify(reminders));
+      loadReminders();
+    }
+
+    function formatTime(timeStr) {
+      const [hours, minutes] = timeStr.split(':');
+      const h = parseInt(hours);
+      const ampm = h >= 12 ? 'PM' : 'AM';
+      const h12 = h % 12 || 12;
+      return `${h12}:${minutes} ${ampm}`;
+    }
+
+    function formatDate(dateStr) {
+      const options = { weekday: 'short', month: 'short', day: 'numeric' };
+      return new Date(dateStr).toLocaleDateString('en-US', options);
+    }
+  </script>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+  <script src="js/notification_service.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Recommendations - Swasthya AI</title>
+  <meta name="description" content="Get personalized wellness recommendations">
+  <link rel="stylesheet" href="styles/modern-design-system.css">
+  <link rel="stylesheet" href="styles/chatbot.css">
+  <style>
+    body {
+      background: var(--bg-gradient-3);
+      min-height: 100vh;
+      padding: var(--space-6) var(--space-4);
+    }
+
+    .recommendations-container {
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--neutral-600);
+      text-decoration: none;
+      margin-bottom: var(--space-6);
+      font-weight: 500;
+      transition: color var(--transition-base);
+    }
+
+    .back-link:hover {
+      color: var(--primary);
+    }
+
+    .recommendations-card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-2xl);
+      margin-bottom: var(--space-6);
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .page-title {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-2);
+      font-weight: 700;
+    }
+
+    .page-subtitle {
+      color: var(--neutral-600);
+      font-size: var(--text-base);
+    }
+
+    /* User Profile Info */
+    .user-info-card {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+      color: white;
+      padding: var(--space-5);
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-6);
+      display: none;
+    }
+
+    .user-info-title {
+      font-weight: 600;
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-3);
+      opacity: 0.9;
+    }
+
+    .user-details {
+      font-size: var(--text-sm);
+      line-height: 1.8;
+    }
+
+    /* Form Styles */
+    .recommendation-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+
+    .form-section {
+      padding-bottom: var(--space-5);
+      border-bottom: 1px solid var(--neutral-200);
+    }
+
+    .form-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: var(--space-4);
+    }
+
+    @media (max-width: 640px) {
+      .recommendations-card {
+        padding: var(--space-6) var(--space-4);
+      }
+    }
+  </style>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+</head>
+
+<body>
+  <div class="recommendations-container">
+    <!-- Language Selector -->
+    <div style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+      <select id="languageSelector" style="padding: 8px; border-radius: 15px; border: 1px solid #ccc; cursor: pointer;">
+        <option value="en">English 🇺🇸</option>
+        <option value="te">Telugu 🇮🇳</option>
+        <option value="kn">Kannada 🇮🇳</option>
+        <option value="hi">Hindi 🇮🇳</option>
+      </select>
+    </div>
+
+    <a href="dashboard.html" class="back-link" data-i18n="back_dashboard">
+      ← Back to Dashboard
+    </a>
+
+    <div class="recommendations-card">
+      <div class="page-header">
+        <h1 class="page-title" data-i18n="rec_page_title">Personalized Wellness</h1>
+        <p class="page-subtitle" data-i18n="rec_page_subtitle">Tell us about your needs and get tailored recommendations
+        </p>
+      </div>
+
+      <!-- User Profile Info -->
+      <div id="userInfo" class="user-info-card">
+        <div class="user-info-title" data-i18n="rec_profile_info_title">Your Profile Information:</div>
+        <div id="userDetails" class="user-details"></div>
+      </div>
+
+      <!-- Recommendation Form -->
+      <form id="recommendationForm" class="recommendation-form">
+        <div class="form-section">
+          <h3 class="section-title" data-i18n="rec_help_with">What would you like help with?</h3>
+
+          <div class="form-group">
+            <label for="condition" class="form-label" data-i18n="rec_label_condition">Condition</label>
+            <select id="condition" class="form-select" required>
+              <option value="" data-i18n="rec_select_condition">Select condition</option>
+              <option value="stress" data-i18n="rec_cond_stress">Stress</option>
+              <option value="migraine" data-i18n="rec_cond_migraine">Migraine</option>
+              <option value="pcod" data-i18n="rec_cond_pcod">PCOD</option>
+              <option value="back pain" data-i18n="rec_cond_back_pain">Back Pain</option>
+              <option value="knee pain" data-i18n="rec_cond_knee_pain">Knee Pain</option>
+              <option value="joint pain" data-i18n="rec_cond_joint_pain">Joint Pain</option>
+              <option value="regular exercise" data-i18n="rec_cond_reg_exercise">Regular Exercise</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Regular Exercise Fields -->
+        <div id="regularExerciseFields" style="display: none;" class="form-section">
+          <h3 class="section-title" data-i18n="rec_exercise_pref">Exercise Preferences</h3>
+
+          <div class="form-group">
+            <label for="level" class="form-label" data-i18n="rec_label_level">Level</label>
+            <select id="level" class="form-select">
+              <option value="" data-i18n="rec_select_level">Select level</option>
+              <option value="beginner" data-i18n="rec_level_beginner">Beginner</option>
+              <option value="intermediate" data-i18n="rec_level_intermediate">Intermediate</option>
+              <option value="advanced" data-i18n="rec_level_advanced">Advanced</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="timeConsumed" class="form-label" data-i18n="rec_label_time_req">Time Required</label>
+            <input type="text" id="timeConsumed" class="form-input" readonly placeholder="Select a level first"
+              data-i18n="rec_placeholder_level_first">
+          </div>
+        </div>
+
+        <!-- Standard Fields -->
+        <div id="standardFields" class="form-section">
+          <h3 class="section-title" data-i18n="rec_additional_details">Additional Details</h3>
+
+          <div class="form-group">
+            <label for="severity" class="form-label" data-i18n="rec_label_severity">Severity</label>
+            <select id="severity" class="form-select" required>
+              <option value="" data-i18n="rec_select_severity">Select severity</option>
+              <option value="mild" data-i18n="rec_sev_mild">Mild</option>
+              <option value="moderate" data-i18n="rec_sev_moderate">Moderate</option>
+              <option value="severe" data-i18n="rec_sev_severe">Severe</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="timeAvailable" class="form-label" data-i18n="rec_label_time_avail">Time Available
+              (minutes)</label>
+            <input type="number" id="timeAvailable" class="form-input" placeholder="Enter time in minutes"
+              data-i18n="rec_placeholder_time" min="1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="regularity" class="form-label" data-i18n="rec_label_regularity">Regularity</label>
+            <select id="regularity" class="form-select" required>
+              <option value="" data-i18n="rec_select_regularity">Select regularity</option>
+              <option value="Daily" data-i18n="rec_reg_daily">Daily</option>
+              <option value="Alternative days" data-i18n="rec_reg_alt_days">Alternative days</option>
+              <option value="Weekly twice" data-i18n="rec_reg_weekly">Weekly twice</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="rec_btn_get_rec">
+          Get Recommendations
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const API = "http://127.0.0.1:5001";
+
+    // Load and display user profile information
+    async function loadUserProfile() {
+      const session = JSON.parse(localStorage.getItem("wellness_session"));
+      if (!session || !session.email) {
+        alert("Please login first!");
+        window.location.href = "auth.html";
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API}/api/user/${session.email}`);
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          const user = json.user;
+          const userInfoDiv = document.getElementById("userInfo");
+          const userDetailsDiv = document.getElementById("userDetails");
+
+          let detailsHTML = `<strong>Name:</strong> ${user.name} | <strong>Age:</strong> ${user.age} | <strong>Gender:</strong> ${user.gender} | <strong>Blood Group:</strong> ${user.blood_group}`;
+
+          const allConditions = [];
+          if (user.conditions && user.conditions.length > 0) {
+            const conditionsMap = { "bp": "Blood Pressure", "diabetes": "Diabetes" };
+            user.conditions.forEach(c => {
+              allConditions.push(conditionsMap[c] || c);
+            });
+          }
+          if (user.other_conditions && user.other_conditions.length > 0) {
+            allConditions.push(...user.other_conditions);
+          }
+          if (allConditions.length > 0) {
+            detailsHTML += ` | <strong>Conditions:</strong> ${allConditions.join(", ")}`;
+          }
+
+          if (user.gender === "female") {
+            const femaleDetails = [];
+            if (user.pcod) femaleDetails.push("PCOS");
+            if (user.recent_pregnancy) femaleDetails.push("Recent Pregnancy");
+            if (femaleDetails.length > 0) {
+              detailsHTML += ` | <strong>Additional:</strong> ${femaleDetails.join(", ")}`;
+            }
+          }
+
+          userDetailsDiv.innerHTML = detailsHTML;
+          userInfoDiv.style.display = "block";
+        }
+      } catch (err) {
+        console.error("Error loading user profile:", err);
+      }
+    }
+
+    // Translation helper
+    function getTrans(key) {
+      const lang = localStorage.getItem('wellness_lang') || 'en';
+      if (translations[lang] && translations[lang][key]) {
+        return translations[lang][key];
+      }
+      return key;
+    }
+
+    // Override loadUserProfile to use translations
+    const originalLoadUserProfile = loadUserProfile;
+    loadUserProfile = async function () {
+      const session = JSON.parse(localStorage.getItem("wellness_session"));
+      if (!session || !session.email) {
+        alert("Please login first!");
+        window.location.href = "auth.html";
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API}/api/user/${session.email}`);
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          const user = json.user;
+          const userInfoDiv = document.getElementById("userInfo");
+          const userDetailsDiv = document.getElementById("userDetails");
+
+          // Translate Gender
+          const genderKey = `gender_${user.gender.toLowerCase()}`;
+          const displayGender = getTrans(genderKey) || user.gender;
+
+          let detailsHTML = `<strong>${getTrans('profile_name')}</strong> ${user.name} | <strong>${getTrans('profile_age')}</strong> ${user.age} | <strong>${getTrans('profile_gender')}</strong> ${displayGender.charAt(0).toUpperCase() + displayGender.slice(1)} | <strong>${getTrans('profile_blood_group')}</strong> ${user.blood_group}`;
+
+          const allConditions = [];
+          if (user.conditions && user.conditions.length > 0) {
+            const conditionsMap = { "bp": "Blood Pressure", "diabetes": "Diabetes" };
+            user.conditions.forEach(c => {
+              allConditions.push(conditionsMap[c] || c);
+            });
+          }
+          if (user.other_conditions && user.other_conditions.length > 0) {
+            allConditions.push(...user.other_conditions);
+          }
+          if (allConditions.length > 0) {
+            detailsHTML += ` | <strong>${getTrans('profile_health_conditions')}</strong> ${allConditions.join(", ")}`;
+          }
+
+          if (user.gender === "female") {
+            const femaleDetails = [];
+            if (user.pcod) femaleDetails.push("PCOS");
+            if (user.recent_pregnancy) femaleDetails.push("Recent Pregnancy");
+            if (femaleDetails.length > 0) {
+              detailsHTML += ` | <strong>${getTrans('profile_additional_info')}</strong> ${femaleDetails.join(", ")}`;
+            }
+          }
+
+          userDetailsDiv.innerHTML = detailsHTML;
+          userInfoDiv.style.display = "block";
+        }
+      } catch (err) {
+        console.error("Error loading user profile:", err);
+      }
+    };
+
+    // Load user profile when page loads
+    document.addEventListener("DOMContentLoaded", loadUserProfile);
+    window.addEventListener('languageChanged', loadUserProfile);
+
+    // Handle Regular Exercise selection
+    document.getElementById("condition").addEventListener("change", function () {
+      const regularFields = document.getElementById("regularExerciseFields");
+      const standardFields = document.getElementById("standardFields");
+
+      if (this.value === "regular exercise") {
+        regularFields.style.display = "block";
+        standardFields.style.display = "none";
+        document.getElementById("level").required = true;
+        document.getElementById("severity").required = false;
+        document.getElementById("timeAvailable").required = false;
+        document.getElementById("regularity").required = false;
+      } else {
+        regularFields.style.display = "none";
+        standardFields.style.display = "block";
+        document.getElementById("level").required = false;
+        document.getElementById("severity").required = true;
+        document.getElementById("timeAvailable").required = true;
+        document.getElementById("regularity").required = true;
+      }
+    });
+
+    // Handle Level selection
+    document.getElementById("level").addEventListener("change", function () {
+      const timeInput = document.getElementById("timeConsumed");
+      switch (this.value) {
+        case "beginner":
+          timeInput.value = "10 minutes";
+          break;
+        case "intermediate":
+          timeInput.value = "15 minutes";
+          break;
+        case "advanced":
+          timeInput.value = "20 minutes";
+          break;
+        default:
+          timeInput.value = "";
+      }
+    });
+
+    document.getElementById("recommendationForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const session = JSON.parse(localStorage.getItem("wellness_session"));
+      if (!session) {
+        alert("Please login first!");
+        window.location.href = "auth.html";
+        return;
+      }
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = getTrans('rec_btn_loading');
+      submitBtn.disabled = true;
+
+      const condition = document.getElementById("condition").value;
+
+      if (condition === "regular exercise") {
+        const level = document.getElementById("level").value;
+        let time = 10;
+        if (level === "intermediate") time = 15;
+        if (level === "advanced") time = 20;
+
+        const recommendation = {
+          condition: "Regular Exercise",
+          level: level,
+          timeAvailable: time,
+          yogapose: "sun_salutation.jpg",
+          exercise: "Sun Salutation Sequence",
+          ayurveda_tip: "Drink warm water with lemon after practice.",
+          isRegularExercise: true,
+          steps: {
+            yoga: [
+              "Stand straight with palms together (Pranamasana).",
+              "Inhale and raise arms overhead (Hastauttanasana).",
+              "Exhale and fold forward (Padahastasana).",
+              "Inhale and step right leg back (Ashwa Sanchalanasana).",
+              "Step left leg back into plank (Dandasana).",
+              "Lower knees, chest, and chin (Ashtanga Namaskara).",
+              "Inhale and lift chest (Bhujangasana).",
+              "Exhale and lift hips (Adho Mukha Svanasana).",
+              "Step right foot forward.",
+              "Step left foot forward.",
+              "Inhale and rise up.",
+              "Exhale and release."
+            ],
+            exercise: ["Follow the Sun Salutation sequence above."],
+            ayurveda: ["Drink warm water with lemon to aid digestion and hydration."]
+          }
+        };
+
+        localStorage.setItem("latest_recommendation", JSON.stringify(recommendation));
+        window.location.href = "result.html";
+        return;
+      }
+
+      const data = {
+        email: session.email,
+        condition: condition,
+        severity: document.getElementById("severity").value,
+        timeAvailable: document.getElementById("timeAvailable").value,
+        regularity: document.getElementById("regularity").value
+      };
+
+      try {
+        const res = await fetch(`${API}/api/recommend`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          const recData = json.recommendation;
+          recData.steps = json.steps;
+          localStorage.setItem("latest_recommendation", JSON.stringify(recData));
+          window.location.href = "result.html";
+        } else {
+          alert(json.error || "No recommendation found.");
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Server error.");
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/notification_service.js"></script>
+</body>
+
+</html>

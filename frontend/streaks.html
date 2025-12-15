@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Streaks - Swasthya AI</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Wellness Streaks</h1>
+    </header>
+
+    <div class="profile-button-container">
+        <a href="dashboard.html" class="profile-button" aria-label="Back to Dashboard">
+            <span style="font-size: 24px; color: #4CAF50;">←</span>
+        </a>
+    </div>
+
+    <main class="streaks-page-content">
+        <div class="streaks-container">
+            <div class="streak-card current-streak">
+                <div class="streak-icon">🔥</div>
+                <div class="streak-info">
+                    <h2>Current Streak</h2>
+                    <p class="streak-days" id="currentStreak">0</p>
+                    <p class="streak-label">days in a row</p>
+                </div>
+            </div>
+
+            <div class="streak-card longest-streak">
+                <div class="streak-icon">⭐</div>
+                <div class="streak-info">
+                    <h2>Longest Streak</h2>
+                    <p class="streak-days" id="longestStreak">0</p>
+                    <p class="streak-label">days</p>
+                </div>
+            </div>
+
+            <div class="streak-card total-sessions">
+                <div class="streak-icon">📊</div>
+                <div class="streak-info">
+                    <h2>Total Sessions</h2>
+                    <p class="streak-days" id="totalSessions">0</p>
+                    <p class="streak-label">completed</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-section">
+            <h3>Recent Activity</h3>
+            <div id="activityCalendar" class="activity-calendar">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="motivation-section">
+            <p class="motivation-text" id="motivationText">Keep up the great work! Every day counts! 🌟</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Wellness Assistant. All rights reserved.</p>
+    </footer>
+
+    <script src="js/session.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language-manager.js"></script>
+    <script src="js/streaks.js"></script>
+</body>
+
+</html>

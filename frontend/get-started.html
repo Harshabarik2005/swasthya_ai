@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - Swasthya AI</title>
+  <meta name="description" content="Join Swasthya AI and start your personalized wellness journey">
+  <link rel="stylesheet" href="styles/modern-design-system.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg,
+          hsl(348, 70%, 85%) 0%,
+          hsl(174, 60%, 88%) 50%,
+          hsl(220, 70%, 90%) 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      padding: var(--space-6) var(--space-4);
+    }
+
+    .register-container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-2xl);
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      animation: scaleIn 0.5s ease-out;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    /* Custom Scrollbar */
+    .register-container::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .register-container::-webkit-scrollbar-track {
+      background: var(--neutral-100);
+      border-radius: var(--radius-lg);
+    }
+
+    .register-container::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: var(--radius-lg);
+    }
+
+    .register-header {
+      text-align: center;
+      margin-bottom: var(--space-6);
+    }
+
+    .register-logo {
+      font-size: var(--text-5xl);
+      margin-bottom: var(--space-2);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .register-title {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-2);
+      font-weight: 700;
+    }
+
+    .register-subtitle {
+      color: var(--neutral-500);
+      font-size: var(--text-sm);
+    }
+
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      color: var(--neutral-700);
+      margin-bottom: var(--space-2);
+      font-size: var(--text-sm);
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--text-base);
+      border: 2px solid var(--neutral-300);
+      border-radius: var(--radius-lg);
+      background: white;
+      transition: all var(--transition-base);
+      outline: none;
+      font-family: var(--font-primary);
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: var(--space-3);
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: var(--text-xl);
+      cursor: pointer;
+      padding: var(--space-2);
+      transition: transform var(--transition-fast);
+      width: auto;
+    }
+
+    .toggle-password:hover {
+      transform: translateY(-50%) scale(1.1);
+      background: none;
+    }
+
+    .form-hint {
+      font-size: var(--text-xs);
+      color: var(--neutral-500);
+      margin-top: var(--space-1);
+    }
+
+    .conditions-section {
+      background: var(--neutral-50);
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      margin-top: var(--space-2);
+    }
+
+    .conditions-title {
+      font-weight: 600;
+      color: var(--neutral-700);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-3);
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      cursor: pointer;
+      font-size: var(--text-sm);
+      color: var(--neutral-700);
+      transition: color var(--transition-fast);
+    }
+
+    .checkbox-label:hover {
+      color: var(--primary);
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--primary);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: var(--space-4);
+      background: var(--primary-gradient);
+      color: white;
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: var(--text-base);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      margin-top: var(--space-2);
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .submit-btn:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl), var(--shadow-glow);
+    }
+
+    .register-footer {
+      text-align: center;
+      margin-top: var(--space-6);
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--neutral-200);
+    }
+
+    .register-footer-text {
+      color: var(--neutral-600);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-2);
+    }
+
+    .register-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .register-link:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: var(--space-3);
+      color: var(--neutral-500);
+      font-size: var(--text-sm);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .back-home:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 640px) {
+      .register-container {
+        padding: var(--space-6) var(--space-4);
+      }
+    }
+
+    /* Password Requirements Styling */
+    .password-requirements {
+      font-size: var(--text-xs);
+      color: var(--neutral-500);
+      margin-top: var(--space-2);
+      background: var(--neutral-50);
+      padding: var(--space-3);
+      border-radius: var(--radius-md);
+    }
+
+    .requirement-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: 2px;
+      transition: color 0.3s ease;
+    }
+
+    .requirement-item.valid {
+      color: var(--primary);
+    }
+
+    .requirement-item.valid::before {
+      content: '✓';
+      font-weight: bold;
+    }
+
+    .requirement-item.invalid {
+      color: var(--neutral-500);
+    }
+
+    .requirement-item.invalid::before {
+      content: '•';
+    }
+
+    /* Username Feedback Styling */
+    .username-feedback {
+      font-size: var(--text-xs);
+      margin-top: var(--space-1);
+      transition: color 0.3s ease;
+    }
+
+    .username-feedback.valid {
+      color: var(--primary);
+    }
+
+    .username-feedback.invalid {
+      color: #ef4444;
+    }
+
+    .username-suggestion {
+      cursor: pointer;
+      text-decoration: underline;
+      margin-right: 5px;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <div class="register-container">
+    <div style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+      <select id="languageSelector" style="padding: 8px; border-radius: 15px; border: 1px solid #ccc; cursor: pointer;">
+        <option value="en">English 🇺🇸</option>
+        <option value="te">Telugu 🇮🇳</option>
+        <option value="kn">Kannada 🇮🇳</option>
+        <option value="hi">Hindi 🇮🇳</option>
+      </select>
+    </div>
+    <div class="register-header">
+      <div class="register-logo">🌿</div>
+      <h2 class="register-title" data-i18n="register_title">Join Swasthya AI</h2>
+      <p class="register-subtitle" data-i18n="register_subtitle">Create your account and start your wellness journey</p>
+    </div>
+
+    <form id="registerForm" class="register-form">
+      <div class="form-group">
+        <label for="name" class="form-label" data-i18n="label_fullname">Full Name</label>
+        <input type="text" id="name" class="form-input" placeholder="Enter your name" data-i18n="placeholder_fullname"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="username" class="form-label" data-i18n="label_username">Username</label>
+        <div style="position:relative;">
+          <input type="text" id="username" class="form-input" placeholder="Choose a unique username"
+            data-i18n="placeholder_username" required>
+          <div id="usernameFeedback" class="username-feedback"></div>
+        </div>
+        <small class="form-hint" data-i18n="hint_username">3-20 characters, letters, numbers, underscores, dots
+          only.</small>
+        <div id="usernameSuggestions" style="display:none; margin-top: 5px; color: var(--primary); font-size: 0.9em;">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label" data-i18n="email_label">Email Address</label>
+        <div style="display: flex; gap: 10px;">
+          <input type="email" id="email" class="form-input" placeholder="your.email@example.com"
+            data-i18n="email_placeholder" required>
+          <button type="button" id="sendOtpBtn" class="submit-btn"
+            style="width: auto; padding: 10px 20px; margin-top: 0; font-size: 0.9em;"
+            data-i18n="btn_verify">Verify</button>
+        </div>
+      </div>
+
+      <div class="form-group" id="otpGroup" style="display: none;">
+        <label for="otp" class="form-label" data-i18n="label_otp">Verification Code</label>
+        <div style="display: flex; gap: 10px;">
+          <input type="text" id="otp" class="form-input" placeholder="Enter 6-digit code" data-i18n="placeholder_otp">
+          <button type="button" id="verifyOtpBtn" class="submit-btn"
+            style="width: auto; padding: 10px 20px; margin-top: 0; font-size: 0.9em; background: var(--neutral-600);"
+            data-i18n="btn_check">Check</button>
+        </div>
+        <small class="form-hint" id="otpMessage"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="age" class="form-label" data-i18n="label_age">Age</label>
+        <input type="number" id="age" class="form-input" placeholder="Enter your age" data-i18n="placeholder_age"
+          min="6" max="119" required>
+        <small class="form-hint" data-i18n="hint_age">Age must be between 6 and 119</small>
+      </div>
+
+      <div class="form-group">
+        <label for="bloodGroup" class="form-label" data-i18n="label_blood_group">Blood Group</label>
+        <select id="bloodGroup" class="form-select" required>
+          <option value="" data-i18n="select_blood_group">Select blood group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="gender" class="form-label" data-i18n="label_gender">Gender</label>
+        <select id="gender" class="form-select" required>
+          <option value="" data-i18n="select_gender">Select gender</option>
+          <option value="male" data-i18n="gender_male">Male</option>
+          <option value="female" data-i18n="gender_female">Female</option>
+          <option value="other" data-i18n="gender_other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="height" class="form-label" data-i18n="label_height">Height (cm)</label>
+        <input type="number" id="height" class="form-input" placeholder="Enter your height in cm"
+          data-i18n="placeholder_height" min="50" max="250" required>
+        <small class="form-hint" data-i18n="hint_height">Height must be between 50 and 250 cm</small>
+      </div>
+
+      <div class="form-group">
+        <label for="weight" class="form-label" data-i18n="label_weight">Weight (kg)</label>
+        <input type="number" id="weight" class="form-input" placeholder="Enter your weight in kg"
+          data-i18n="placeholder_weight" min="20" max="300" step="0.1" required>
+        <small class="form-hint" data-i18n="hint_weight">Weight must be between 20 and 300 kg</small>
+      </div>
+
+      <div class="form-group">
+        <label for="activityLevel" class="form-label" data-i18n="label_activity">Activity Level</label>
+        <select id="activityLevel" class="form-select" required>
+          <option value="" data-i18n="select_activity">Select activity level</option>
+          <option value="sedentary" data-i18n="act_sedentary">Sedentary (Little to no exercise)</option>
+          <option value="moderate" data-i18n="act_moderate">Moderate (Exercise 1-3 times per week)</option>
+          <option value="active" data-i18n="act_active">Active (Exercise 4+ times per week)</option>
+        </select>
+      </div>
+
+      <!-- Female-specific fields (hidden by default) -->
+      <div id="femaleFields" style="display: none;">
+        <div class="conditions-section">
+          <p class="conditions-title" data-i18n="female_info_title">Female-Specific Health Information</p>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="recentPregnancy">
+              <span data-i18n="label_pregnancy">Recent Pregnancy</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="pcod">
+              <span data-i18n="label_pcos">PCOS (Polycystic Ovarian Syndrome)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- General health conditions -->
+      <div class="conditions-section">
+        <p class="conditions-title" data-i18n="cond_title">Health Conditions</p>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="bp" name="conditions">
+            <span data-i18n="cond_bp">Blood Pressure (BP)</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="diabetes" name="conditions">
+            <span data-i18n="cond_diabetes">Diabetes</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="otherConditions" class="form-label" data-i18n="label_other_cond">Other Conditions (Optional)</label>
+        <input type="text" id="otherConditions" class="form-input" placeholder="Enter any other health conditions"
+          data-i18n="placeholder_other_cond">
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label" data-i18n="password_label">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" class="form-input" placeholder="Create a password"
+            data-i18n="password_placeholder" required>
+          <button type="button" id="togglePassword" class="toggle-password">👁️</button>
+        </div>
+        <div class="password-requirements" id="passwordRequirements" style="display:none;">
+          <div class="requirement-item" id="req-length">At least 8 characters</div>
+          <div class="requirement-item" id="req-upper">At least one uppercase letter</div>
+          <div class="requirement-item" id="req-lower">At least one lowercase letter</div>
+          <div class="requirement-item" id="req-number">At least one number</div>
+          <div class="requirement-item" id="req-special">At least one special character (!@#$%^&*)</div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" data-i18n="btn_create_account">
+        Create Account
+      </button>
+    </form>
+
+    <div class="register-footer">
+      <p class="register-footer-text">
+        <span data-i18n="text_already_account">Already have an account?</span>
+        <a href="auth.html" class="register-link" data-i18n="link_login">Login here</a>
+      </p>
+      <a href="index.html" class="back-home" data-i18n="back_home">← Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    const API = "http://127.0.0.1:5001";
+
+    // Password visibility toggle
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      togglePassword.textContent = type === 'password' ? '👁️' : '🙈';
+    });
+
+    // Password Validation Logic
+    const passwordRequirements = document.getElementById('passwordRequirements');
+    const reqLength = document.getElementById('req-length');
+    const reqUpper = document.getElementById('req-upper');
+    const reqLower = document.getElementById('req-lower');
+    const reqNumber = document.getElementById('req-number');
+    const reqSpecial = document.getElementById('req-special');
+
+    passwordInput.addEventListener('focus', () => {
+      passwordRequirements.style.display = 'block';
+    });
+
+    passwordInput.addEventListener('input', () => {
+      const val = passwordInput.value;
+
+      // Length
+      if (val.length >= 8) {
+        reqLength.classList.add('valid');
+        reqLength.classList.remove('invalid');
+      } else {
+        reqLength.classList.remove('valid');
+        reqLength.classList.add('invalid');
+      }
+
+      // Uppercase
+      if (/[A-Z]/.test(val)) {
+        reqUpper.classList.add('valid');
+        reqUpper.classList.remove('invalid');
+      } else {
+        reqUpper.classList.remove('valid');
+        reqUpper.classList.add('invalid');
+      }
+
+      // Lowercase
+      if (/[a-z]/.test(val)) {
+        reqLower.classList.add('valid');
+        reqLower.classList.remove('invalid');
+      } else {
+        reqLower.classList.remove('valid');
+        reqLower.classList.add('invalid');
+      }
+
+      // Number
+      if (/[0-9]/.test(val)) {
+        reqNumber.classList.add('valid');
+        reqNumber.classList.remove('invalid');
+      } else {
+        reqNumber.classList.remove('valid');
+        reqNumber.classList.add('invalid');
+      }
+
+      // Special Char
+      if (/[!@#$%^&*(),.?":{}|<>]/.test(val)) {
+        reqSpecial.classList.add('valid');
+        reqSpecial.classList.remove('invalid');
+      } else {
+        reqSpecial.classList.remove('valid');
+        reqSpecial.classList.add('invalid');
+      }
+    });
+
+    // Username Availability Check
+    const usernameInput = document.getElementById('username');
+    const usernameFeedback = document.getElementById('usernameFeedback');
+
+    let debounceTimer;
+    usernameInput.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      const username = usernameInput.value.trim();
+      const suggestionsDiv = document.getElementById('usernameSuggestions');
+
+      // Reset state
+      usernameFeedback.textContent = '';
+      usernameFeedback.className = 'username-feedback';
+      suggestionsDiv.style.display = 'none';
+
+      if (username.length < 3) return;
+
+      debounceTimer = setTimeout(async () => {
+        try {
+          usernameFeedback.textContent = 'Checking...';
+          usernameFeedback.style.color = 'var(--neutral-500)';
+
+          const res = await fetch(`${API}/api/check-username`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username })
+          });
+          const json = await res.json();
+
+          if (json.available) {
+            usernameFeedback.textContent = '✓ ' + (json.message || 'Available');
+            usernameFeedback.className = 'username-feedback valid';
+          } else {
+            usernameFeedback.textContent = '✗ ' + (json.error || json.message || 'Taken');
+            usernameFeedback.className = 'username-feedback invalid';
+
+            if (json.suggestions && json.suggestions.length > 0) {
+              suggestionsDiv.style.display = 'block';
+              suggestionsDiv.innerHTML = '<strong>Taken! Try:</strong> ';
+              json.suggestions.forEach(sug => {
+                const span = document.createElement('span');
+                span.textContent = sug;
+                span.className = 'username-suggestion';
+                span.onclick = () => {
+                  usernameInput.value = sug;
+                  usernameInput.dispatchEvent(new Event('input')); // Re-trigger check
+                };
+                suggestionsDiv.appendChild(span);
+              });
+            }
+          }
+        } catch (err) {
+          console.error('Username check failed', err);
+          usernameFeedback.textContent = '';
+        }
+      }, 500); // 500ms debounce
+    });
+
+    // Show/hide female-specific fields based on gender selection
+    document.getElementById("gender").addEventListener("change", function () {
+      const femaleFields = document.getElementById("femaleFields");
+      if (this.value === "female") {
+        femaleFields.style.display = "block";
+      } else {
+        femaleFields.style.display = "none";
+        document.getElementById("recentPregnancy").checked = false;
+        document.getElementById("pcod").checked = false;
+      }
+    });
+
+    // OTP Logic
+    let isEmailVerified = false;
+    const sendOtpBtn = document.getElementById('sendOtpBtn');
+    const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+    const otpGroup = document.getElementById('otpGroup');
+    const otpMessage = document.getElementById('otpMessage');
+    const emailInput = document.getElementById('email');
+
+    sendOtpBtn.addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+      if (!email || !email.includes('@')) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      if (!email.endsWith('@gmail.com')) {
+        alert("Please use a valid @gmail.com address.");
+        return;
+      }
+
+
+      sendOtpBtn.textContent = "Sending...";
+      sendOtpBtn.disabled = true;
+
+      try {
+        const res = await fetch(`${API}/api/send-otp`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email })
+        });
+        const json = await res.json();
+
+        if (res.ok) {
+          otpGroup.style.display = "block";
+          otpMessage.textContent = "OTP sent! Check your email (or console for demo).";
+          otpMessage.style.color = "var(--primary)";
+          sendOtpBtn.textContent = "Resend";
+        } else {
+          alert(json.error || "Failed to send OTP");
+          sendOtpBtn.textContent = "Verify";
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Error sending OTP");
+        sendOtpBtn.textContent = "Verify";
+      } finally {
+        sendOtpBtn.disabled = false;
+      }
+    });
+
+    verifyOtpBtn.addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+      const otp = document.getElementById('otp').value.trim();
+
+      if (!otp) {
+        alert("Please enter the OTP.");
+        return;
+      }
+
+      verifyOtpBtn.textContent = "Checking...";
+      verifyOtpBtn.disabled = true;
+
+      try {
+        const res = await fetch(`${API}/api/verify-otp`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, otp })
+        });
+        const json = await res.json();
+
+        if (res.ok) {
+          isEmailVerified = true;
+          otpMessage.textContent = "Email Verified Successfully!";
+          otpMessage.style.color = "green";
+          verifyOtpBtn.textContent = "✓";
+          verifyOtpBtn.style.background = "green";
+          emailInput.readOnly = true;
+          document.getElementById('otp').readOnly = true;
+          sendOtpBtn.style.display = "none";
+        } else {
+          otpMessage.textContent = json.error || "Invalid OTP";
+          otpMessage.style.color = "red";
+          verifyOtpBtn.textContent = "Check";
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Error verifying OTP");
+        verifyOtpBtn.textContent = "Check";
+      } finally {
+        if (!isEmailVerified) verifyOtpBtn.disabled = false;
+      }
+    });
+
+    document.getElementById("registerForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      if (!isEmailVerified) {
+        alert("Please verify your email address before registering.");
+        return;
+      }
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Creating account...';
+      submitBtn.disabled = true;
+
+      // Reset suggestions
+      const suggestionsDiv = document.getElementById('usernameSuggestions');
+      suggestionsDiv.style.display = 'none';
+      suggestionsDiv.innerHTML = '';
+
+      // Get age and validate
+      const age = parseInt(document.getElementById("age").value);
+      if (age <= 5 || age >= 120) {
+        alert("Age must be between 6 and 119!");
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        return;
+      }
+
+      const gender = document.getElementById("gender").value;
+      const conditions = [];
+
+      if (document.getElementById("bp").checked) {
+        conditions.push("bp");
+      }
+      if (document.getElementById("diabetes").checked) {
+        conditions.push("diabetes");
+      }
+
+      // Add other conditions if provided
+      const otherConditions = document.getElementById("otherConditions").value.trim();
+      if (otherConditions) {
+        conditions.push(otherConditions);
+      }
+
+      // Build user data
+      const data = {
+        name: document.getElementById("name").value.trim(),
+        username: document.getElementById("username").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        age: age,
+        bloodGroup: document.getElementById("bloodGroup").value,
+        gender: gender,
+        height: parseFloat(document.getElementById("height").value),
+        weight: parseFloat(document.getElementById("weight").value),
+        activityLevel: document.getElementById("activityLevel").value,
+        conditions: conditions,
+        password: document.getElementById("password").value.trim()
+      };
+
+      // Add female-specific fields if gender is female
+      if (gender === "female") {
+        data.recentPregnancy = document.getElementById("recentPregnancy").checked;
+        data.pcod = document.getElementById("pcod").checked;
+      }
+
+      try {
+        const res = await fetch(`${API}/api/register`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const json = await res.json();
+        if (res.ok && json.success) {
+          submitBtn.textContent = '✓ Account Created!';
+          submitBtn.style.background = 'linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 76%, 26%))';
+
+          setTimeout(() => {
+            alert("Account created successfully! Please log in.");
+            window.location = "auth.html";
+          }, 500);
+        } else {
+          alert(json.error || "Registration failed. Try again.");
+
+          // Handle username suggestions
+          if (json.suggestions && json.suggestions.length > 0) {
+            suggestionsDiv.style.display = 'block';
+            suggestionsDiv.innerHTML = '<strong>Username taken! Try:</strong> ' + json.suggestions.join(', ');
+          }
+
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Server error. Ensure Flask backend is running.");
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+</body>
+
+</html>

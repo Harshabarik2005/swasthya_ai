@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Wellness Plan - Swasthya AI</title>
+  <link rel="stylesheet" href="styles/modern-design-system.css">
+  <style>
+    body {
+      background: var(--bg-gradient-3);
+      min-height: 100vh;
+      padding: var(--space-6) var(--space-4);
+      font-family: var(--font-body);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .page-title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-2);
+      font-weight: 700;
+    }
+
+    .page-subtitle {
+      color: var(--neutral-600);
+      font-size: var(--text-lg);
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: white;
+      color: var(--primary);
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      font-size: 24px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-base);
+      z-index: 100;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-lg);
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-6);
+      margin-bottom: var(--space-8);
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      transition: all var(--transition-base);
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-2xl);
+    }
+
+    .card-image-container {
+      height: 240px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-image {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: var(--space-5);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-type {
+      text-transform: uppercase;
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      margin-bottom: var(--space-2);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-3);
+      font-weight: 600;
+    }
+
+    .card-action {
+      margin-top: auto;
+      color: var(--primary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-2xl);
+      width: 90%;
+      max-width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: var(--shadow-2xl);
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .modal-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-image-col {
+      height: 300px;
+      background: var(--neutral-100);
+    }
+
+    @media (min-width: 768px) {
+      .modal-image-col {
+        height: 100%;
+      }
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-details-col {
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--neutral-600);
+      transition: all 0.2s;
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      background: white;
+      color: var(--error);
+      transform: rotate(90deg);
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-4);
+      font-weight: 700;
+    }
+
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--space-6) 0;
+      counter-reset: step-counter;
+    }
+
+    .steps-list li {
+      position: relative;
+      padding-left: var(--space-8);
+      margin-bottom: var(--space-3);
+      color: var(--neutral-600);
+      line-height: 1.6;
+    }
+
+    .steps-list li::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 50%;
+      font-size: var(--text-xs);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Timer in Modal */
+    .modal-timer-box {
+      background: var(--bg-gradient-1);
+      padding: var(--space-4);
+      border-radius: var(--radius-xl);
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .timer-display {
+      font-family: var(--font-mono);
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--primary);
+      margin: var(--space-2) 0;
+    }
+
+    .timer-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: var(--space-2) var(--space-6);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .timer-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .timer-btn:disabled {
+      background: var(--neutral-400);
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Warning Box */
+    .warning-banner {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #991B1B;
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-6);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Back Button -->
+  <button class="back-btn" onclick="window.location.href='dashboard.html'" title="Back to Dashboard">
+    ←
+  </button>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">Your Wellness Plan</h1>
+      <p class="page-subtitle">Personalized recommendations for your well-being</p>
+    </div>
+
+    <div id="warningContainer"></div>
+
+    <div id="cardsGrid" class="cards-grid">
+      <!-- Cards will be injected here -->
+    </div>
+  </div>
+
+  <!-- Modal Template -->
+  <div id="detailsModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">×</button>
+
+      <div class="modal-image-col">
+        <img id="modalImage" src="" alt="Detail" class="modal-image" onerror="handleImageError(this)">
+      </div>
+
+      <div class="modal-details-col">
+        <div id="modalType" class="card-type"></div>
+        <h2 id="modalTitle" class="modal-title"></h2>
+
+        <div style="flex-grow: 1; overflow-y: auto;">
+          <h4 style="margin-bottom: var(--space-3); color: var(--neutral-700);">Instructions</h4>
+          <ul id="modalSteps" class="steps-list"></ul>
+        </div>
+
+        <div id="modalTimerSection" class="modal-timer-box" style="display: none;">
+          <div style="font-size: var(--text-sm); color: var(--neutral-600);">Session Duration</div>
+          <div id="modalTimerDisplay" class="timer-display">00:00</div>
+          <button id="modalTimerBtn" class="timer-btn" onclick="startModalTimer()">Start Session</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API = "http://127.0.0.1:5001";
+    const session = JSON.parse(localStorage.getItem("wellness_session"));
+    const recommendation = JSON.parse(localStorage.getItem("latest_recommendation"));
+
+    // State for the active timer
+    let activeTimerInterval = null;
+    let currentDuration = 0; // in minutes
+
+    // Initialization
+    if (!recommendation || !session) {
+      document.getElementById("cardsGrid").innerHTML = `
+        <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+          <h3>No recommendation found</h3>
+          <p>Please go back to the dashboard and start a new session.</p>
+        </div>
+      `;
+    } else {
+      renderPage();
+    }
+
+    function renderPage() {
+      // 1. Render Warning
+      if (recommendation.warning) {
+        document.getElementById("warningContainer").innerHTML = `
+          <div class="warning-banner">
+            <span style="font-size: 24px;">⚠️</span>
+            <div>
+              <strong>Caution:</strong> ${recommendation.warning}
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. Prepare Data
+      const steps = recommendation.steps || { yoga: [], exercise: [], ayurveda: [] };
+      const cardsData = [];
+
+      // Yoga Card
+      if (recommendation.yogapose) {
+        cardsData.push({
+          type: 'yoga',
+          title: formatTitle(recommendation.yogapose),
+          image: recommendation.yogapose,
+          steps: steps.yoga,
+          duration: recommendation.timeAvailable // Shared duration for now
+        });
+      }
+
+      // Exercise Card
+      if (recommendation.exercise) {
+        cardsData.push({
+          type: 'exercise',
+          title: formatTitle(recommendation.exercise),
+          image: recommendation.exercise,
+          steps: steps.exercise,
+          duration: recommendation.timeAvailable
+        });
+      }
+
+      // Ayurveda Card
+      if (recommendation.ayurveda_tip) {
+        cardsData.push({
+          type: 'ayurveda',
+          title: formatTitle(recommendation.ayurveda_tip),
+          image: recommendation.ayurveda_tip,
+          steps: steps.ayurveda,
+          duration: null // No timer for Ayurveda usually
+        });
+      }
+
+      // 3. Render Cards
+      const grid = document.getElementById("cardsGrid");
+      grid.innerHTML = cardsData.map((card, index) => `
+        <div class="card" onclick="openModal(${index})">
+          <div class="card-image-container">
+            <img src="images/${card.image}" 
+                 alt="${card.title}" 
+                 class="card-image"
+                 data-original-name="${card.image}"
+                 onerror="handleImageError(this, '${card.type}')">
+          </div>
+          <div class="card-content">
+            <div class="card-type">${card.type}</div>
+            <h3 class="card-title">${card.title}</h3>
+            <div class="card-action">
+              View Details →
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Store data for modal access
+      window.pageData = cardsData;
+    }
+
+    // Modal Logic
+    function openModal(index) {
+      const data = window.pageData[index];
+      const modal = document.getElementById("detailsModal");
+
+      // Populate Content
+      document.getElementById("modalType").textContent = data.type;
+      document.getElementById("modalTitle").textContent = data.title;
+
+      const img = document.getElementById("modalImage");
+      img.src = `images/${data.image}`;
+      img.dataset.originalName = data.image; // For error handler
+      img.dataset.hasError = ""; // Reset error state
+
+      // Steps
+      const stepsList = document.getElementById("modalSteps");
+      if (data.steps && data.steps.length > 0) {
+        stepsList.innerHTML = data.steps.map(step => `<li>${step}</li>`).join('');
+      } else {
+        stepsList.innerHTML = '<li>Follow the instructions in the image.</li>';
+      }
+
+      // Timer
+      const timerSection = document.getElementById("modalTimerSection");
+      if (data.duration) {
+        timerSection.style.display = "block";
+        currentDuration = parseInt(data.duration);
+        document.getElementById("modalTimerDisplay").textContent = `${currentDuration}:00`;
+        document.getElementById("modalTimerBtn").disabled = false;
+        document.getElementById("modalTimerBtn").textContent = "Start Session";
+      } else {
+        timerSection.style.display = "none";
+      }
+
+      // Show Modal
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("detailsModal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+
+      // Stop timer if running
+      if (activeTimerInterval) {
+        clearInterval(activeTimerInterval);
+        activeTimerInterval = null;
+      }
+    }
+
+    // Close on click outside
+    document.getElementById("detailsModal").addEventListener("click", (e) => {
+      if (e.target === document.getElementById("detailsModal")) {
+        closeModal();
+      }
+    });
+
+    // Timer Logic
+    function startModalTimer() {
+      const display = document.getElementById("modalTimerDisplay");
+      const btn = document.getElementById("modalTimerBtn");
+
+      let time = currentDuration * 60;
+      btn.disabled = true;
+      btn.textContent = "Session in Progress...";
+
+      activeTimerInterval = setInterval(() => {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        display.textContent = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+        time--;
+
+        if (time < 0) {
+          clearInterval(activeTimerInterval);
+          display.textContent = "✅ Done!";
+          btn.textContent = "Session Completed";
+          saveCompletedSession(); // Optional: save progress
+        }
+      }, 1000);
+    }
+
+    // Helpers
+    function formatTitle(filename) {
+      if (!filename) return "";
+      return filename.replace(/_/g, ' ').replace(/\.(jpg|png|jpeg)/gi, '').replace(/\b\w/g, l => l.toUpperCase());
+    }
+
+    function getDynamicUrl(imgName, type) {
+      let prompt = imgName.replace(/\.(jpg|png|jpeg)/gi, '').replace(/_/g, ' ');
+      if (type === 'yoga') prompt = `photorealistic yoga pose ${prompt}, wellness, bright, 4k, soft lighting`;
+      else if (type === 'exercise') prompt = `photorealistic person doing ${prompt} exercise, fitness, outdoor, 4k`;
+      else if (type === 'ayurveda') prompt = `photorealistic ${prompt}, ayurveda, herbal, cinematic lighting, healthy`;
+      return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}`;
+    }
+
+    window.handleImageError = function (img, type) {
+      if (img.dataset.hasError) return;
+      img.dataset.hasError = "true";
+      const originalName = img.dataset.originalName || img.getAttribute('src').split('/').pop();
+      // Infer type if not passed (e.g. from modal)
+      if (!type) {
+        // Try to guess from parent or context, or default to 'wellness'
+        type = 'wellness';
+      }
+      console.log(`Generating dynamic image for ${originalName}`);
+      img.src = getDynamicUrl(originalName, type);
+    };
+
+    async function saveCompletedSession() {
+      // Simple fire-and-forget save
+      try {
+        await fetch(`${API}/api/recommend`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: session.email,
+            completed: true,
+            timestamp: new Date().toISOString()
+          })
+        });
+      } catch (e) {
+        console.error("Failed to save session", e);
+      }
+    }
+  </script>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swasthya AI - Personalized Wellness Powered by AI</title>
+    <meta name="description"
+        content="Your personal AI-powered wellness assistant for yoga, exercise, and Ayurveda recommendations">
+    <link rel="stylesheet" href="styles/modern-design-system.css">
+    <style>
+        /* Hero Section Styles */
+        .hero-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg,
+                    hsl(160, 84%, 45%) 0%,
+                    hsl(174, 72%, 56%) 35%,
+                    hsl(160, 65%, 60%) 70%,
+                    hsl(348, 60%, 70%) 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow: hidden;
+        }
+
+        /* Animated Background Shapes */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .bg-shape-1 {
+            width: 300px;
+            height: 300px;
+            background: white;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bg-shape-2 {
+            width: 200px;
+            height: 200px;
+            background: white;
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+
+        .bg-shape-3 {
+            width: 150px;
+            height: 150px;
+            background: white;
+            bottom: 15%;
+            left: 20%;
+            animation-delay: 6s;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: var(--space-8) var(--space-6);
+            max-width: 900px;
+        }
+
+        .hero-glass-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-10) var(--space-8);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: white;
+            margin-bottom: var(--space-6);
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+            line-height: 1.1;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: var(--space-8);
+            line-height: 1.6;
+            font-weight: 400;
+            animation: slideDown 0.8s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--text-lg);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-lg);
+            min-width: 180px;
+        }
+
+        .hero-btn-primary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid white;
+        }
+
+        .hero-btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* Features Preview */
+        .features-preview {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            max-width: 900px;
+            margin-top: var(--space-8);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .feature-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-xl);
+            color: white;
+            font-size: var(--text-sm);
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .feature-badge:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .hero-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: var(--space-6);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: var(--text-sm);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero-glass-container {
+                padding: var(--space-6) var(--space-4);
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-btn {
+                width: 100%;
+            }
+
+            .features-preview {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Shapes -->
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+
+    <!-- Language Selector -->
+    <div style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+        <select id="languageSelector"
+            style="padding: 10px; border-radius: 20px; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-weight: bold; cursor: pointer; outline: none;">
+            <option value="en">English 🇺🇸</option>
+            <option value="te">Telugu 🇮🇳</option>
+            <option value="kn">Kannada 🇮🇳</option>
+            <option value="hi">Hindi 🇮🇳</option>
+        </select>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-wrapper">
+        <div class="hero-content">
+            <div class="hero-glass-container">
+                <h1 class="hero-title" data-i18n="hero_title">
+                    🌿 Welcome to Swasthya AI
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Your personal AI-powered wellness companion for holistic health.<br>
+                    Get personalized Yoga, Exercise, and Ayurveda recommendations tailored just for you.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="get-started.html" class="hero-btn hero-btn-primary" data-i18n="get_started">
+                        ✨ Get Started
+                    </a>
+                    <a href="auth.html" class="hero-btn hero-btn-secondary" data-i18n="sign_in">
+                        🔐 Sign In
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/translations.js"></script>
+    <script src="js/language-manager.js"></script>
+</body>
+
+</html>

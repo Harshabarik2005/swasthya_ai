@@ -1,0 +1,799 @@
+id,condition,age,age_group,gender,severity,has_bp,has_diabetes,bmi_category,activity_level,time_available,yoga_pose,exercise,ayurveda_tip
+695,regular exercise,23,young_adult,male,Mild,1,0,underweight,sedentary,30,viparita_karani.jpg,push_ups.jpg,ashwagandha_tea.jpg
+666,joint pain,41,adult,female,Mild,0,0,overweight,Moderate,20,cat_cow.jpg,walking.jpg,brahmi_powder.jpg
+64,stress,15,child,male,Mild,0,0,underweight,Moderate,60,sukhasana.jpg,jogging.jpg,chamomile_tea.jpg
+534,knee pain,37,adult,male,Moderate,0,0,normal,sedentary,30,pawanmuktasana.jpg,pilates.jpg,coconut_oil.jpg
+67,stress,42,adult,male,Moderate,0,0,obese,sedentary,30,viparita_karani.jpg,walking.jpg,fenugreek_seeds.jpg
+622,joint pain,26,young_adult,other,Mild,0,0,underweight,sedentary,20,marjaryasana.jpg,pilates.jpg,sesame_oil.jpg
+347,back pain,28,young_adult,other,Severe,1,0,underweight,active,60,pawanmuktasana.jpg,stretching.jpg,sesame_oil.jpg
+491,knee pain,34,young_adult,female,Mild,0,0,normal,Moderate,60,marjaryasana.jpg,stretching.jpg,head_massage_oil.jpg
+646,joint pain,17,child,female,Moderate,0,0,overweight,sedentary,20,virabhadrasana.jpg,gentle_stretching.jpg,ashwagandha_powder.jpg
+457,knee pain,18,young_adult,other,Moderate,0,0,underweight,active,20,marjaryasana.jpg,walking.jpg,head_massage_oil.jpg
+66,stress,37,adult,male,Mild,0,0,overweight,active,60,shavasana.jpg,cycling.jpg,fenugreek_seeds.jpg
+287,pcod,28,young_adult,female,Severe,0,0,overweight,sedentary,30,supta_baddha_konasana.jpg,brisk_walk.jpg,fenugreek_seeds.jpg
+636,joint pain,54,senior,female,Moderate,0,0,underweight,Moderate,60,navasana.jpg,chair_exercises.jpg,brahmi_powder.jpg
+68,stress,42,adult,male,Severe,0,0,normal,active,45,sukhasana.jpg,swimming.jpg,lavender_tea.jpg
+328,pcod,45,adult,female,Moderate,0,0,underweight,sedentary,30,baddha_konasana.jpg,cycling.jpg,turmeric_milk.jpg
+396,back pain,53,senior,female,Moderate,0,0,overweight,sedentary,30,pawanmuktasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+245,pcod,43,adult,female,Mild,0,0,underweight,active,10,baddha_konasana.jpg,cycling.jpg,cinnamon_tea.jpg
+378,back pain,10,child,other,Moderate,1,0,overweight,sedentary,20,gomukhasana.jpg,resistance_band.jpg,sesame_oil.jpg
+611,joint pain,54,senior,female,Mild,0,0,underweight,Moderate,60,gomukhasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+527,knee pain,33,young_adult,other,Severe,0,0,obese,sedentary,45,gomukhasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+657,joint pain,45,adult,female,Mild,0,0,obese,sedentary,45,gomukhasana.jpg,chair_exercises.jpg,brahmi_powder.jpg
+530,knee pain,35,young_adult,female,Moderate,0,1,overweight,sedentary,45,gomukhasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+623,joint pain,21,young_adult,male,Severe,0,1,normal,active,45,virabhadrasana.jpg,stretching.jpg,brahmi_powder.jpg
+720,regular exercise,52,senior,other,Mild,0,0,normal,Moderate,20,balasana.jpg,walking.jpg,ashwagandha_tea.jpg
+361,back pain,51,senior,male,Moderate,0,0,overweight,active,45,gomukhasana.jpg,walking.jpg,sesame_oil.jpg
+31,stress,29,young_adult,male,Severe,0,0,underweight,Moderate,20,bhramari.jpg,cycling.jpg,ginger_tea.jpg
+261,pcod,53,senior,female,Mild,0,0,overweight,active,30,baddha_konasana.jpg,water_aerobics.jpg,lavender_tea.jpg
+638,joint pain,53,senior,female,Mild,0,0,obese,active,45,virabhadrasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+745,regular exercise,7,child,male,Mild,0,0,obese,Moderate,10,chaturanga.jpg,gentle_stretching.jpg,green_tea.jpg
+571,joint pain,10,child,female,Moderate,1,0,overweight,active,45,marjaryasana.jpg,tai_chi.jpg,coconut_oil.jpg
+216,migraine,45,adult,other,Severe,0,0,overweight,sedentary,20,anulom_vilom.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+79,stress,35,young_adult,female,Moderate,0,0,normal,active,60,anulom_vilom.jpg,jogging.jpg,green_tea.jpg
+579,joint pain,40,adult,female,Severe,0,0,overweight,Moderate,10,navasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+384,back pain,22,young_adult,female,Severe,0,0,underweight,active,30,marjaryasana.jpg,tai_chi.jpg,warm_oil_massage.jpg
+40,stress,22,young_adult,female,Severe,0,0,overweight,Moderate,30,shavasana.jpg,cycling.jpg,fenugreek_seeds.jpg
+24,stress,42,adult,female,Moderate,0,0,obese,active,45,anulom_vilom.jpg,walking.jpg,fenugreek_seeds.jpg
+673,joint pain,50,adult,female,Moderate,1,0,overweight,sedentary,20,virabhadrasana.jpg,chair_exercises.jpg,brahmi_powder.jpg
+399,back pain,25,young_adult,male,Mild,0,0,underweight,active,45,marjaryasana.jpg,bodyweight_squats.jpg,warm_oil_massage.jpg
+795,regular exercise,49,adult,female,Mild,0,0,obese,sedentary,10,plank.jpg,water_aerobics.jpg,lavender_tea.jpg
+740,regular exercise,13,child,other,Mild,0,0,overweight,active,15,virabhadrasana.jpg,jogging.jpg,green_tea.jpg
+140,migraine,51,senior,other,Moderate,0,1,overweight,sedentary,15,sukhasana.jpg,water_aerobics.jpg,turmeric_milk.jpg
+251,pcod,45,adult,female,Severe,0,0,overweight,sedentary,10,malasana.jpg,brisk_walk.jpg,cinnamon_tea.jpg
+175,migraine,6,child,male,Moderate,0,0,underweight,active,20,bhramari.jpg,walking.jpg,green_tea.jpg
+324,pcod,47,adult,female,Mild,0,0,overweight,Moderate,60,baddha_konasana.jpg,jogging.jpg,turmeric_milk.jpg
+596,joint pain,11,child,other,Severe,0,0,overweight,sedentary,10,pawanmuktasana.jpg,gentle_stretching.jpg,coconut_oil.jpg
+526,knee pain,13,child,male,Severe,0,0,normal,sedentary,30,gomukhasana.jpg,tai_chi.jpg,warm_oil_massage.jpg
+424,back pain,46,adult,female,Severe,0,0,underweight,sedentary,15,marjaryasana.jpg,yoga_flow.jpg,sesame_oil.jpg
+597,joint pain,14,child,male,Mild,0,0,normal,Moderate,45,virabhadrasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+605,joint pain,51,senior,female,Severe,0,0,overweight,sedentary,20,gomukhasana.jpg,gentle_stretching.jpg,brahmi_powder.jpg
+535,knee pain,40,adult,other,Moderate,1,0,underweight,Moderate,45,cat_cow.jpg,chair_exercises.jpg,coconut_oil.jpg
+266,pcod,49,adult,female,Mild,0,0,overweight,active,30,baddha_konasana.jpg,jogging.jpg,turmeric_milk.jpg
+110,stress,36,adult,female,Mild,0,0,obese,sedentary,30,sukhasana.jpg,walking.jpg,chamomile_tea.jpg
+665,joint pain,24,young_adult,female,Moderate,0,0,overweight,sedentary,20,cat_cow.jpg,gentle_stretching.jpg,brahmi_powder.jpg
+295,pcod,15,child,female,Moderate,0,0,underweight,sedentary,10,setu_bandhasana.jpg,jogging.jpg,chamomile_tea.jpg
+337,pcod,7,child,female,Moderate,0,0,normal,sedentary,20,malasana.jpg,jogging.jpg,lavender_tea.jpg
+369,back pain,53,senior,female,Mild,0,0,overweight,active,10,cat_cow.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+447,back pain,36,adult,female,Moderate,0,0,obese,sedentary,20,pawanmuktasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+334,pcod,10,child,female,Moderate,0,0,overweight,active,15,setu_bandhasana.jpg,swimming.jpg,fenugreek_seeds.jpg
+199,migraine,18,young_adult,other,Severe,0,0,underweight,active,30,balasana.jpg,gentle_stretching.jpg,chamomile_tea.jpg
+169,migraine,33,young_adult,male,Mild,0,0,overweight,sedentary,60,kapalbhati.jpg,walking.jpg,turmeric_milk.jpg
+482,knee pain,42,adult,female,Mild,0,0,obese,Moderate,45,gomukhasana.jpg,water_aerobics.jpg,sesame_oil.jpg
+722,regular exercise,39,adult,other,Mild,0,0,overweight,active,30,navasana.jpg,cycling.jpg,chamomile_tea.jpg
+654,joint pain,48,adult,female,Severe,0,0,obese,sedentary,20,marjaryasana.jpg,gentle_stretching.jpg,brahmi_powder.jpg
+307,pcod,51,senior,female,Moderate,0,0,normal,Moderate,20,baddha_konasana.jpg,water_aerobics.jpg,turmeric_milk.jpg
+232,pcod,15,child,female,Severe,0,0,overweight,active,45,supta_baddha_konasana.jpg,jogging.jpg,lavender_tea.jpg
+423,back pain,29,young_adult,other,Moderate,0,0,overweight,active,45,uttanasana.jpg,tai_chi.jpg,sesame_oil.jpg
+50,stress,12,child,other,Mild,0,0,normal,Moderate,30,anulom_vilom.jpg,cycling.jpg,chamomile_tea.jpg
+786,regular exercise,54,senior,other,Mild,0,0,normal,Moderate,10,virabhadrasana.jpg,gentle_stretching.jpg,lavender_tea.jpg
+358,back pain,43,adult,female,Severe,0,0,overweight,Moderate,20,paschimottanasana.jpg,stretching.jpg,coconut_oil.jpg
+87,stress,28,young_adult,other,Moderate,0,0,normal,active,60,balasana.jpg,brisk_walk.jpg,ginger_tea.jpg
+546,knee pain,52,senior,male,Mild,0,0,overweight,sedentary,45,pawanmuktasana.jpg,walking.jpg,head_massage_oil.jpg
+193,migraine,46,adult,female,Mild,0,0,obese,active,20,pranayama.jpg,chair_exercises.jpg,head_massage_oil.jpg
+794,regular exercise,54,senior,other,Mild,0,0,normal,Moderate,60,chaturanga.jpg,water_aerobics.jpg,ginger_tea.jpg
+34,stress,40,adult,male,Severe,0,0,overweight,sedentary,60,bhramari.jpg,cycling.jpg,ashwagandha_powder.jpg
+32,stress,54,senior,female,Moderate,0,0,normal,active,30,pranayama.jpg,walking.jpg,cinnamon_tea.jpg
+200,migraine,42,adult,female,Mild,0,0,overweight,sedentary,30,bhramari.jpg,chair_exercises.jpg,green_tea.jpg
+366,back pain,33,young_adult,other,Mild,0,0,underweight,Moderate,15,ardha_matsyendrasana.jpg,push_ups.jpg,coconut_oil.jpg
+487,knee pain,49,adult,other,Mild,0,0,underweight,active,45,marjaryasana.jpg,tai_chi.jpg,warm_oil_massage.jpg
+595,joint pain,37,adult,female,Mild,0,0,normal,active,30,virabhadrasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+569,knee pain,10,child,male,Mild,0,0,overweight,sedentary,10,gomukhasana.jpg,pilates.jpg,warm_oil_massage.jpg
+429,back pain,29,young_adult,male,Severe,0,0,underweight,active,10,ardha_matsyendrasana.jpg,resistance_band.jpg,sesame_oil.jpg
+138,migraine,46,adult,female,Severe,0,0,normal,active,60,balasana.jpg,walking.jpg,head_massage_oil.jpg
+73,stress,54,senior,female,Mild,1,0,obese,sedentary,15,viparita_karani.jpg,walking.jpg,green_tea.jpg
+78,stress,44,adult,female,Mild,0,0,underweight,active,10,balasana.jpg,jogging.jpg,ashwagandha_tea.jpg
+513,knee pain,44,adult,female,Mild,0,0,obese,active,10,marjaryasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+780,regular exercise,30,young_adult,female,Mild,0,0,overweight,active,20,shavasana.jpg,swimming.jpg,turmeric_milk.jpg
+785,regular exercise,53,senior,male,Mild,0,0,obese,Moderate,30,sukhasana.jpg,walking.jpg,turmeric_milk.jpg
+276,pcod,52,senior,female,Moderate,0,0,underweight,active,15,baddha_konasana.jpg,chair_exercises.jpg,turmeric_milk.jpg
+362,back pain,16,child,female,Mild,0,0,underweight,Moderate,30,trikonasana.jpg,resistance_band.jpg,head_massage_oil.jpg
+97,stress,19,young_adult,other,Mild,0,1,underweight,active,30,balasana.jpg,cycling.jpg,ashwagandha_powder.jpg
+641,joint pain,46,adult,other,Severe,0,0,overweight,Moderate,15,plank.jpg,stretching.jpg,warm_oil_massage.jpg
+714,regular exercise,46,adult,other,Mild,0,0,overweight,Moderate,20,shavasana.jpg,resistance_band.jpg,green_tea.jpg
+282,pcod,15,child,female,Moderate,1,0,normal,Moderate,30,malasana.jpg,cycling.jpg,cinnamon_tea.jpg
+394,back pain,20,young_adult,male,Mild,0,0,overweight,Moderate,20,paschimottanasana.jpg,resistance_band.jpg,coconut_oil.jpg
+629,joint pain,10,child,female,Severe,0,0,normal,Moderate,45,chaturanga.jpg,stretching.jpg,brahmi_powder.jpg
+609,joint pain,51,senior,other,Moderate,1,0,normal,sedentary,60,gomukhasana.jpg,gentle_stretching.jpg,turmeric_powder.jpg
+704,regular exercise,20,young_adult,female,Mild,0,0,underweight,Moderate,45,ardha_matsyendrasana.jpg,cycling.jpg,chamomile_tea.jpg
+753,regular exercise,6,child,other,Mild,0,0,overweight,sedentary,15,balasana.jpg,brisk_walk.jpg,turmeric_milk.jpg
+55,stress,6,child,male,Severe,0,0,obese,Moderate,10,balasana.jpg,water_aerobics.jpg,triphala.jpg
+749,regular exercise,38,adult,female,Mild,0,0,obese,Moderate,15,chaturanga.jpg,gentle_stretching.jpg,lavender_tea.jpg
+156,migraine,16,child,female,Moderate,0,0,normal,sedentary,20,pranayama.jpg,chair_exercises.jpg,coconut_oil.jpg
+433,back pain,14,child,male,Moderate,0,1,underweight,Moderate,45,ardha_matsyendrasana.jpg,stretching.jpg,head_massage_oil.jpg
+98,stress,49,adult,male,Moderate,0,0,obese,active,15,sukhasana.jpg,chair_exercises.jpg,cinnamon_tea.jpg
+121,migraine,52,senior,other,Moderate,0,0,overweight,Moderate,60,bhramari.jpg,walking.jpg,lavender_tea.jpg
+77,stress,45,adult,male,Moderate,0,0,underweight,Moderate,60,balasana.jpg,cycling.jpg,ashwagandha_powder.jpg
+205,migraine,8,child,other,Mild,0,0,overweight,sedentary,15,kapalbhati.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+353,back pain,10,child,female,Moderate,0,1,overweight,active,30,trikonasana.jpg,tai_chi.jpg,sesame_oil.jpg
+763,regular exercise,40,adult,other,Mild,0,0,obese,sedentary,20,balasana.jpg,walking.jpg,ginger_tea.jpg
+209,migraine,51,senior,other,Moderate,0,0,normal,Moderate,30,anulom_vilom.jpg,water_aerobics.jpg,ginger_tea.jpg
+368,back pain,20,young_adult,female,Mild,0,0,obese,Moderate,60,cat_cow.jpg,chair_exercises.jpg,head_massage_oil.jpg
+426,back pain,9,child,other,Severe,0,0,normal,sedentary,30,uttanasana.jpg,push_ups.jpg,coconut_oil.jpg
+516,knee pain,21,young_adult,female,Mild,0,0,obese,active,10,cat_cow.jpg,walking.jpg,coconut_oil.jpg
+85,stress,54,senior,other,Mild,0,0,obese,sedentary,15,shavasana.jpg,water_aerobics.jpg,amla_juice.jpg
+11,stress,28,young_adult,male,Moderate,0,0,overweight,active,20,anulom_vilom.jpg,brisk_walk.jpg,amla_juice.jpg
+719,regular exercise,53,senior,male,Mild,0,0,underweight,sedentary,60,plank.jpg,chair_exercises.jpg,ginger_tea.jpg
+111,stress,35,young_adult,male,Mild,0,0,underweight,sedentary,15,pranayama.jpg,brisk_walk.jpg,turmeric_milk.jpg
+522,knee pain,31,young_adult,male,Mild,0,0,obese,active,60,pawanmuktasana.jpg,walking.jpg,sesame_oil.jpg
+776,regular exercise,28,young_adult,other,Mild,0,0,obese,active,20,sukhasana.jpg,water_aerobics.jpg,turmeric_milk.jpg
+210,migraine,51,senior,female,Moderate,0,0,obese,Moderate,60,shavasana.jpg,walking.jpg,sesame_oil.jpg
+236,pcod,26,young_adult,female,Severe,0,0,overweight,active,60,supta_baddha_konasana.jpg,cycling.jpg,amla_juice.jpg
+317,pcod,47,adult,female,Severe,0,0,underweight,sedentary,10,setu_bandhasana.jpg,jogging.jpg,triphala.jpg
+389,back pain,35,young_adult,female,Moderate,0,0,underweight,active,60,uttanasana.jpg,tai_chi.jpg,warm_oil_massage.jpg
+119,migraine,6,child,female,Moderate,0,0,normal,Moderate,60,shavasana.jpg,chair_exercises.jpg,ashwagandha_tea.jpg
+718,regular exercise,11,child,female,Mild,0,0,overweight,Moderate,30,navasana.jpg,swimming.jpg,chamomile_tea.jpg
+211,migraine,54,senior,male,Mild,0,0,overweight,sedentary,15,anulom_vilom.jpg,water_aerobics.jpg,lavender_tea.jpg
+255,pcod,50,adult,female,Moderate,0,0,normal,active,15,setu_bandhasana.jpg,jogging.jpg,triphala.jpg
+592,joint pain,20,young_adult,male,Mild,0,0,normal,active,15,gomukhasana.jpg,water_aerobics.jpg,brahmi_powder.jpg
+30,stress,51,senior,female,Severe,0,0,overweight,Moderate,10,balasana.jpg,gentle_stretching.jpg,turmeric_powder.jpg
+267,pcod,10,child,female,Mild,1,0,overweight,active,60,setu_bandhasana.jpg,brisk_walk.jpg,amla_juice.jpg
+653,joint pain,41,adult,other,Severe,0,1,overweight,sedentary,60,gomukhasana.jpg,pilates.jpg,sesame_oil.jpg
+661,joint pain,34,young_adult,male,Moderate,0,0,normal,Moderate,30,cat_cow.jpg,tai_chi.jpg,head_massage_oil.jpg
+297,pcod,54,senior,female,Mild,0,0,underweight,active,10,setu_bandhasana.jpg,walking.jpg,green_tea.jpg
+82,stress,48,adult,other,Severe,0,0,obese,sedentary,30,kapalbhati.jpg,gentle_stretching.jpg,chamomile_tea.jpg
+757,regular exercise,53,senior,female,Mild,0,0,underweight,sedentary,60,virabhadrasana.jpg,gentle_stretching.jpg,green_tea.jpg
+303,pcod,28,young_adult,female,Moderate,0,0,underweight,active,10,supta_baddha_konasana.jpg,brisk_walk.jpg,cinnamon_tea.jpg
+507,knee pain,10,child,male,Moderate,1,1,obese,sedentary,60,marjaryasana.jpg,walking.jpg,coconut_oil.jpg
+685,regular exercise,6,child,other,Mild,0,0,underweight,sedentary,45,chaturanga.jpg,brisk_walk.jpg,ginger_tea.jpg
+315,pcod,54,senior,female,Moderate,0,0,obese,active,10,baddha_konasana.jpg,water_aerobics.jpg,chamomile_tea.jpg
+644,joint pain,48,adult,female,Severe,0,0,overweight,active,20,chaturanga.jpg,chair_exercises.jpg,turmeric_powder.jpg
+410,back pain,6,child,male,Moderate,0,0,overweight,Moderate,20,cat_cow.jpg,stretching.jpg,sesame_oil.jpg
+212,migraine,36,adult,other,Severe,0,0,obese,sedentary,20,bhramari.jpg,water_aerobics.jpg,sesame_oil.jpg
+533,knee pain,52,senior,other,Moderate,0,0,obese,Moderate,15,cat_cow.jpg,water_aerobics.jpg,sesame_oil.jpg
+484,knee pain,6,child,other,Severe,0,0,underweight,active,10,cat_cow.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+219,migraine,40,adult,female,Severe,0,0,underweight,active,60,kapalbhati.jpg,water_aerobics.jpg,coconut_oil.jpg
+8,stress,52,senior,male,Mild,0,0,overweight,active,30,viparita_karani.jpg,chair_exercises.jpg,amla_juice.jpg
+465,knee pain,8,child,male,Mild,0,1,normal,active,20,gomukhasana.jpg,tai_chi.jpg,coconut_oil.jpg
+102,stress,32,young_adult,other,Severe,0,1,overweight,Moderate,60,viparita_karani.jpg,jogging.jpg,turmeric_powder.jpg
+327,pcod,21,young_adult,female,Severe,0,0,underweight,active,15,malasana.jpg,swimming.jpg,amla_juice.jpg
+651,joint pain,50,adult,female,Severe,0,0,obese,Moderate,45,virabhadrasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+538,knee pain,24,young_adult,male,Severe,0,0,overweight,Moderate,10,gomukhasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+640,joint pain,23,young_adult,other,Mild,0,0,underweight,Moderate,10,chaturanga.jpg,yoga_flow.jpg,head_massage_oil.jpg
+3,stress,38,adult,female,Moderate,0,0,underweight,active,45,viparita_karani.jpg,cycling.jpg,turmeric_milk.jpg
+737,regular exercise,22,young_adult,male,Mild,0,0,underweight,sedentary,15,shavasana.jpg,resistance_band.jpg,ashwagandha_tea.jpg
+775,regular exercise,40,adult,male,Mild,0,1,overweight,sedentary,45,viparita_karani.jpg,bodyweight_squats.jpg,green_tea.jpg
+520,knee pain,53,senior,other,Moderate,0,1,underweight,Moderate,10,marjaryasana.jpg,walking.jpg,head_massage_oil.jpg
+590,joint pain,53,senior,male,Moderate,0,0,obese,Moderate,45,cat_cow.jpg,walking.jpg,turmeric_powder.jpg
+797,regular exercise,34,young_adult,female,Mild,0,1,obese,sedentary,10,uttanasana.jpg,chair_exercises.jpg,turmeric_milk.jpg
+743,regular exercise,38,adult,female,Mild,0,0,obese,sedentary,30,virabhadrasana.jpg,water_aerobics.jpg,chamomile_tea.jpg
+514,knee pain,40,adult,other,Moderate,1,0,underweight,sedentary,20,marjaryasana.jpg,yoga_flow.jpg,coconut_oil.jpg
+669,joint pain,43,adult,female,Severe,0,0,normal,sedentary,10,marjaryasana.jpg,yoga_flow.jpg,turmeric_powder.jpg
+265,pcod,46,adult,female,Moderate,0,0,normal,Moderate,30,setu_bandhasana.jpg,jogging.jpg,ashwagandha_tea.jpg
+616,joint pain,42,adult,female,Severe,0,1,underweight,active,15,pawanmuktasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+330,pcod,15,child,female,Mild,0,0,obese,Moderate,60,baddha_konasana.jpg,water_aerobics.jpg,fenugreek_seeds.jpg
+343,back pain,20,young_adult,female,Moderate,0,0,obese,active,15,trikonasana.jpg,water_aerobics.jpg,coconut_oil.jpg
+395,back pain,40,adult,other,Severe,1,0,normal,Moderate,10,marjaryasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+80,stress,25,young_adult,male,Moderate,0,0,overweight,Moderate,20,sukhasana.jpg,swimming.jpg,cinnamon_tea.jpg
+149,migraine,21,young_adult,other,Mild,0,0,obese,Moderate,45,pranayama.jpg,walking.jpg,ashwagandha_tea.jpg
+351,back pain,27,young_adult,other,Mild,0,0,obese,active,45,marjaryasana.jpg,gentle_stretching.jpg,coconut_oil.jpg
+383,back pain,15,child,female,Moderate,0,0,underweight,sedentary,10,marjaryasana.jpg,resistance_band.jpg,head_massage_oil.jpg
+441,back pain,40,adult,other,Mild,0,0,normal,sedentary,20,uttanasana.jpg,pilates.jpg,sesame_oil.jpg
+310,pcod,22,young_adult,female,Mild,0,0,overweight,sedentary,60,setu_bandhasana.jpg,cycling.jpg,cinnamon_tea.jpg
+706,regular exercise,43,adult,female,Mild,0,0,overweight,sedentary,45,chaturanga.jpg,jogging.jpg,ginger_tea.jpg
+134,migraine,54,senior,male,Severe,0,0,obese,active,20,shavasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+382,back pain,40,adult,female,Moderate,0,0,normal,active,15,trikonasana.jpg,wall_push.jpg,sesame_oil.jpg
+214,migraine,17,child,female,Moderate,0,0,normal,active,20,anulom_vilom.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+658,joint pain,49,adult,other,Mild,0,0,normal,Moderate,60,virabhadrasana.jpg,pilates.jpg,brahmi_powder.jpg
+56,stress,27,young_adult,other,Mild,0,0,underweight,Moderate,15,pranayama.jpg,brisk_walk.jpg,turmeric_powder.jpg
+735,regular exercise,42,adult,female,Mild,0,0,normal,sedentary,10,trikonasana.jpg,swimming.jpg,lavender_tea.jpg
+621,joint pain,25,young_adult,other,Severe,0,0,normal,active,30,plank.jpg,pilates.jpg,warm_oil_massage.jpg
+583,joint pain,18,young_adult,other,Moderate,0,0,obese,sedentary,20,plank.jpg,chair_exercises.jpg,sesame_oil.jpg
+642,joint pain,25,young_adult,male,Severe,0,0,obese,active,15,cat_cow.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+528,knee pain,6,child,male,Mild,0,0,obese,active,20,pawanmuktasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+197,migraine,20,young_adult,other,Severe,0,0,normal,sedentary,45,viparita_karani.jpg,chair_exercises.jpg,head_massage_oil.jpg
+712,regular exercise,47,adult,female,Mild,0,0,overweight,Moderate,10,trikonasana.jpg,bodyweight_squats.jpg,lavender_tea.jpg
+688,regular exercise,7,child,other,Mild,0,0,overweight,active,45,navasana.jpg,wall_push.jpg,turmeric_milk.jpg
+61,stress,51,senior,other,Mild,0,0,underweight,Moderate,20,shavasana.jpg,walking.jpg,ashwagandha_powder.jpg
+577,joint pain,40,adult,other,Severe,0,0,obese,Moderate,20,navasana.jpg,gentle_stretching.jpg,turmeric_powder.jpg
+632,joint pain,31,young_adult,male,Mild,0,0,underweight,active,60,virabhadrasana.jpg,pilates.jpg,head_massage_oil.jpg
+432,back pain,52,senior,male,Mild,0,0,normal,sedentary,20,trikonasana.jpg,walking.jpg,head_massage_oil.jpg
+604,joint pain,45,adult,other,Mild,0,0,underweight,Moderate,45,virabhadrasana.jpg,gentle_stretching.jpg,ashwagandha_powder.jpg
+443,back pain,16,child,female,Severe,1,0,obese,Moderate,30,pawanmuktasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+437,back pain,51,senior,female,Moderate,0,0,underweight,Moderate,10,gomukhasana.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+248,pcod,44,adult,female,Moderate,0,0,overweight,sedentary,15,setu_bandhasana.jpg,swimming.jpg,lavender_tea.jpg
+587,joint pain,6,child,other,Mild,0,0,overweight,sedentary,30,cat_cow.jpg,stretching.jpg,ashwagandha_powder.jpg
+570,knee pain,9,child,male,Mild,0,0,obese,active,45,marjaryasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+91,stress,33,young_adult,other,Moderate,0,0,normal,Moderate,30,shavasana.jpg,swimming.jpg,ashwagandha_tea.jpg
+649,joint pain,15,child,female,Mild,0,0,overweight,active,15,cat_cow.jpg,gentle_stretching.jpg,turmeric_powder.jpg
+182,migraine,22,young_adult,male,Moderate,0,0,obese,Moderate,20,anulom_vilom.jpg,water_aerobics.jpg,coconut_oil.jpg
+789,regular exercise,43,adult,female,Mild,0,0,normal,sedentary,30,shavasana.jpg,push_ups.jpg,ginger_tea.jpg
+555,knee pain,9,child,other,Mild,0,0,obese,sedentary,10,pawanmuktasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+291,pcod,35,young_adult,female,Moderate,1,0,normal,Moderate,10,setu_bandhasana.jpg,jogging.jpg,cinnamon_tea.jpg
+159,migraine,20,young_adult,other,Mild,0,0,overweight,Moderate,45,bhramari.jpg,chair_exercises.jpg,coconut_oil.jpg
+70,stress,54,senior,other,Severe,0,0,overweight,active,30,pranayama.jpg,gentle_stretching.jpg,amla_juice.jpg
+518,knee pain,33,young_adult,male,Mild,0,0,normal,Moderate,60,gomukhasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+132,migraine,24,young_adult,male,Mild,0,0,obese,sedentary,10,pranayama.jpg,water_aerobics.jpg,ginger_tea.jpg
+45,stress,29,young_adult,female,Severe,0,0,underweight,Moderate,15,kapalbhati.jpg,cycling.jpg,amla_juice.jpg
+71,stress,8,child,male,Mild,0,0,normal,sedentary,45,sukhasana.jpg,swimming.jpg,turmeric_milk.jpg
+690,regular exercise,37,adult,female,Mild,0,0,overweight,sedentary,30,navasana.jpg,cycling.jpg,ashwagandha_tea.jpg
+356,back pain,42,adult,female,Moderate,0,1,obese,sedentary,60,gomukhasana.jpg,walking.jpg,coconut_oil.jpg
+445,back pain,52,senior,female,Severe,0,1,obese,active,30,marjaryasana.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+760,regular exercise,51,senior,female,Mild,0,0,underweight,sedentary,45,virabhadrasana.jpg,chair_exercises.jpg,green_tea.jpg
+136,migraine,38,adult,female,Moderate,0,0,obese,sedentary,30,bhramari.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+83,stress,44,adult,female,Moderate,0,0,underweight,Moderate,60,balasana.jpg,swimming.jpg,ginger_tea.jpg
+166,migraine,51,senior,other,Severe,0,0,overweight,sedentary,10,bhramari.jpg,gentle_stretching.jpg,ashwagandha_tea.jpg
+165,migraine,26,young_adult,other,Moderate,0,0,normal,Moderate,45,viparita_karani.jpg,chair_exercises.jpg,head_massage_oil.jpg
+29,stress,46,adult,female,Severe,0,0,underweight,Moderate,45,shavasana.jpg,swimming.jpg,turmeric_powder.jpg
+449,back pain,20,young_adult,male,Severe,0,0,underweight,active,10,marjaryasana.jpg,yoga_flow.jpg,sesame_oil.jpg
+194,migraine,27,young_adult,other,Mild,0,0,overweight,sedentary,45,viparita_karani.jpg,chair_exercises.jpg,green_tea.jpg
+240,pcod,27,young_adult,female,Mild,0,0,obese,sedentary,10,malasana.jpg,water_aerobics.jpg,turmeric_milk.jpg
+793,regular exercise,44,adult,other,Mild,0,0,obese,Moderate,15,shavasana.jpg,chair_exercises.jpg,green_tea.jpg
+729,regular exercise,45,adult,male,Mild,0,0,obese,sedentary,45,trikonasana.jpg,water_aerobics.jpg,green_tea.jpg
+137,migraine,11,child,other,Mild,0,0,normal,active,60,viparita_karani.jpg,walking.jpg,head_massage_oil.jpg
+663,joint pain,6,child,other,Mild,0,1,overweight,Moderate,20,gomukhasana.jpg,yoga_flow.jpg,brahmi_powder.jpg
+312,pcod,44,adult,female,Severe,0,0,normal,active,60,baddha_konasana.jpg,cycling.jpg,amla_juice.jpg
+141,migraine,10,child,other,Severe,0,0,underweight,Moderate,45,viparita_karani.jpg,chair_exercises.jpg,green_tea.jpg
+474,knee pain,42,adult,male,Severe,0,0,overweight,sedentary,45,cat_cow.jpg,yoga_flow.jpg,coconut_oil.jpg
+7,stress,7,child,female,Mild,0,0,overweight,sedentary,45,shavasana.jpg,jogging.jpg,amla_juice.jpg
+727,regular exercise,44,adult,female,Mild,0,0,underweight,sedentary,45,trikonasana.jpg,resistance_band.jpg,green_tea.jpg
+754,regular exercise,16,child,male,Mild,0,0,underweight,sedentary,20,sukhasana.jpg,bodyweight_squats.jpg,lavender_tea.jpg
+74,stress,37,adult,female,Severe,0,0,overweight,sedentary,45,balasana.jpg,cycling.jpg,ashwagandha_powder.jpg
+560,knee pain,48,adult,male,Moderate,0,0,underweight,sedentary,45,gomukhasana.jpg,pilates.jpg,warm_oil_massage.jpg
+300,pcod,8,child,female,Severe,0,0,normal,active,20,setu_bandhasana.jpg,cycling.jpg,chamomile_tea.jpg
+146,migraine,38,adult,male,Moderate,0,0,obese,sedentary,20,sukhasana.jpg,walking.jpg,sesame_oil.jpg
+293,pcod,36,adult,female,Severe,0,0,obese,active,20,malasana.jpg,walking.jpg,ashwagandha_tea.jpg
+235,pcod,49,adult,female,Mild,0,0,normal,sedentary,20,supta_baddha_konasana.jpg,cycling.jpg,green_tea.jpg
+221,migraine,54,senior,male,Moderate,0,0,normal,active,30,balasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+451,back pain,45,adult,female,Mild,0,0,obese,sedentary,10,uttanasana.jpg,walking.jpg,sesame_oil.jpg
+381,back pain,10,child,male,Mild,0,0,overweight,sedentary,20,gomukhasana.jpg,yoga_flow.jpg,coconut_oil.jpg
+133,migraine,53,senior,other,Mild,0,1,normal,Moderate,20,shavasana.jpg,chair_exercises.jpg,ashwagandha_tea.jpg
+376,back pain,53,senior,male,Moderate,0,0,normal,Moderate,15,gomukhasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+405,back pain,24,young_adult,female,Severe,0,0,underweight,Moderate,30,ardha_matsyendrasana.jpg,stretching.jpg,head_massage_oil.jpg
+523,knee pain,18,young_adult,male,Mild,0,0,overweight,Moderate,20,pawanmuktasana.jpg,tai_chi.jpg,sesame_oil.jpg
+766,regular exercise,32,young_adult,female,Mild,0,0,overweight,Moderate,60,ardha_matsyendrasana.jpg,push_ups.jpg,turmeric_milk.jpg
+427,back pain,44,adult,male,Mild,0,0,normal,Moderate,20,ardha_matsyendrasana.jpg,push_ups.jpg,head_massage_oil.jpg
+42,stress,44,adult,female,Moderate,0,0,overweight,sedentary,45,shavasana.jpg,brisk_walk.jpg,chamomile_tea.jpg
+496,knee pain,54,senior,other,Severe,0,0,overweight,Moderate,45,marjaryasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+109,stress,18,young_adult,other,Moderate,0,0,normal,Moderate,10,sukhasana.jpg,brisk_walk.jpg,amla_juice.jpg
+345,back pain,19,young_adult,female,Mild,0,0,overweight,sedentary,30,trikonasana.jpg,bodyweight_squats.jpg,sesame_oil.jpg
+57,stress,35,young_adult,male,Moderate,0,0,underweight,active,10,kapalbhati.jpg,jogging.jpg,turmeric_powder.jpg
+260,pcod,11,child,female,Moderate,0,0,underweight,sedentary,10,supta_baddha_konasana.jpg,cycling.jpg,lavender_tea.jpg
+480,knee pain,46,adult,female,Mild,0,0,obese,sedentary,20,marjaryasana.jpg,water_aerobics.jpg,coconut_oil.jpg
+626,joint pain,14,child,other,Mild,0,1,overweight,active,60,gomukhasana.jpg,walking.jpg,head_massage_oil.jpg
+228,migraine,29,young_adult,other,Mild,0,0,obese,sedentary,20,bhramari.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+213,migraine,11,child,male,Mild,0,0,obese,active,60,anulom_vilom.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+594,joint pain,46,adult,other,Severe,0,0,underweight,Moderate,45,cat_cow.jpg,tai_chi.jpg,sesame_oil.jpg
+333,pcod,16,child,female,Severe,0,0,normal,Moderate,10,supta_baddha_konasana.jpg,brisk_walk.jpg,chamomile_tea.jpg
+25,stress,23,young_adult,other,Severe,0,0,overweight,sedentary,60,viparita_karani.jpg,cycling.jpg,ginger_tea.jpg
+779,regular exercise,45,adult,male,Mild,0,0,overweight,Moderate,30,viparita_karani.jpg,resistance_band.jpg,ginger_tea.jpg
+352,back pain,41,adult,female,Mild,1,0,obese,sedentary,15,pawanmuktasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+357,back pain,6,child,female,Mild,0,0,underweight,active,10,pawanmuktasana.jpg,push_ups.jpg,coconut_oil.jpg
+52,stress,39,adult,female,Mild,0,0,normal,active,20,bhramari.jpg,jogging.jpg,cinnamon_tea.jpg
+332,pcod,11,child,female,Mild,1,0,underweight,active,45,malasana.jpg,cycling.jpg,ashwagandha_tea.jpg
+732,regular exercise,28,young_adult,other,Mild,0,0,overweight,Moderate,10,paschimottanasana.jpg,push_ups.jpg,chamomile_tea.jpg
+630,joint pain,46,adult,female,Mild,0,1,underweight,active,10,navasana.jpg,tai_chi.jpg,sesame_oil.jpg
+502,knee pain,52,senior,other,Severe,0,0,overweight,Moderate,10,marjaryasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+335,pcod,49,adult,female,Mild,1,0,overweight,active,10,baddha_konasana.jpg,swimming.jpg,ginger_tea.jpg
+286,pcod,13,child,female,Mild,0,0,normal,active,60,malasana.jpg,jogging.jpg,ginger_tea.jpg
+19,stress,52,senior,male,Severe,0,0,obese,sedentary,60,anulom_vilom.jpg,walking.jpg,chamomile_tea.jpg
+585,joint pain,17,child,male,Mild,0,0,obese,Moderate,45,navasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+747,regular exercise,29,young_adult,female,Mild,0,0,normal,Moderate,60,balasana.jpg,resistance_band.jpg,ashwagandha_tea.jpg
+84,stress,14,child,male,Severe,0,0,normal,Moderate,15,shavasana.jpg,cycling.jpg,turmeric_milk.jpg
+62,stress,48,adult,female,Moderate,0,0,obese,sedentary,20,kapalbhati.jpg,chair_exercises.jpg,cinnamon_tea.jpg
+463,knee pain,54,senior,female,Moderate,0,0,overweight,sedentary,60,marjaryasana.jpg,water_aerobics.jpg,coconut_oil.jpg
+292,pcod,51,senior,female,Severe,0,0,overweight,sedentary,10,malasana.jpg,walking.jpg,cinnamon_tea.jpg
+448,back pain,7,child,female,Severe,0,0,overweight,active,20,marjaryasana.jpg,tai_chi.jpg,sesame_oil.jpg
+183,migraine,26,young_adult,male,Mild,0,0,overweight,sedentary,15,shavasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+550,knee pain,48,adult,other,Moderate,0,0,overweight,sedentary,10,marjaryasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+501,knee pain,7,child,other,Severe,1,0,obese,active,45,gomukhasana.jpg,walking.jpg,warm_oil_massage.jpg
+224,migraine,30,young_adult,female,Severe,0,0,obese,Moderate,15,sukhasana.jpg,walking.jpg,lavender_tea.jpg
+425,back pain,32,young_adult,male,Mild,0,0,obese,sedentary,30,cat_cow.jpg,chair_exercises.jpg,coconut_oil.jpg
+468,knee pain,39,adult,male,Mild,0,0,obese,sedentary,30,pawanmuktasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+320,pcod,38,adult,female,Severe,0,0,normal,sedentary,30,baddha_konasana.jpg,brisk_walk.jpg,chamomile_tea.jpg
+329,pcod,46,adult,female,Mild,0,0,overweight,sedentary,60,malasana.jpg,cycling.jpg,cinnamon_tea.jpg
+444,back pain,53,senior,female,Mild,0,0,underweight,Moderate,20,paschimottanasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+494,knee pain,48,adult,male,Mild,0,0,obese,active,60,cat_cow.jpg,water_aerobics.jpg,head_massage_oil.jpg
+177,migraine,11,child,male,Mild,1,0,overweight,active,10,balasana.jpg,walking.jpg,chamomile_tea.jpg
+691,regular exercise,51,senior,female,Mild,0,0,obese,sedentary,30,sukhasana.jpg,gentle_stretching.jpg,lavender_tea.jpg
+364,back pain,47,adult,male,Moderate,0,0,overweight,sedentary,60,trikonasana.jpg,resistance_band.jpg,coconut_oil.jpg
+164,migraine,51,senior,male,Mild,0,0,underweight,active,20,kapalbhati.jpg,gentle_stretching.jpg,turmeric_milk.jpg
+249,pcod,38,adult,female,Moderate,0,0,obese,active,60,setu_bandhasana.jpg,walking.jpg,green_tea.jpg
+519,knee pain,51,senior,male,Severe,0,0,obese,active,20,cat_cow.jpg,gentle_stretching.jpg,coconut_oil.jpg
+709,regular exercise,52,senior,male,Mild,0,0,underweight,sedentary,10,virabhadrasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+75,stress,52,senior,other,Moderate,0,0,underweight,Moderate,45,anulom_vilom.jpg,chair_exercises.jpg,triphala.jpg
+672,joint pain,49,adult,male,Mild,0,0,normal,sedentary,15,gomukhasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+406,back pain,45,adult,female,Moderate,0,0,obese,Moderate,20,uttanasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+105,stress,52,senior,female,Moderate,0,0,underweight,Moderate,45,bhramari.jpg,chair_exercises.jpg,ashwagandha_powder.jpg
+115,migraine,43,adult,male,Severe,0,1,obese,active,60,kapalbhati.jpg,walking.jpg,sesame_oil.jpg
+301,pcod,7,child,female,Moderate,0,0,overweight,Moderate,30,baddha_konasana.jpg,cycling.jpg,green_tea.jpg
+93,stress,33,young_adult,male,Moderate,1,0,normal,sedentary,45,anulom_vilom.jpg,jogging.jpg,triphala.jpg
+412,back pain,13,child,female,Mild,0,0,normal,active,15,gomukhasana.jpg,pilates.jpg,sesame_oil.jpg
+90,stress,49,adult,male,Mild,0,0,normal,Moderate,60,pranayama.jpg,cycling.jpg,ashwagandha_powder.jpg
+529,knee pain,51,senior,other,Moderate,0,0,normal,sedentary,45,pawanmuktasana.jpg,walking.jpg,head_massage_oil.jpg
+733,regular exercise,43,adult,female,Mild,0,0,underweight,sedentary,45,plank.jpg,jogging.jpg,ginger_tea.jpg
+742,regular exercise,54,senior,male,Mild,0,1,normal,Moderate,15,trikonasana.jpg,water_aerobics.jpg,turmeric_milk.jpg
+576,joint pain,48,adult,other,Moderate,0,0,normal,active,10,navasana.jpg,water_aerobics.jpg,ashwagandha_powder.jpg
+498,knee pain,47,adult,male,Severe,0,0,underweight,sedentary,15,pawanmuktasana.jpg,tai_chi.jpg,coconut_oil.jpg
+495,knee pain,15,child,other,Mild,0,0,underweight,active,20,marjaryasana.jpg,walking.jpg,coconut_oil.jpg
+12,stress,18,young_adult,male,Moderate,0,0,normal,Moderate,45,pranayama.jpg,cycling.jpg,ashwagandha_powder.jpg
+434,back pain,10,child,other,Moderate,0,0,obese,Moderate,20,cat_cow.jpg,gentle_stretching.jpg,coconut_oil.jpg
+44,stress,26,young_adult,other,Mild,1,0,underweight,Moderate,60,anulom_vilom.jpg,swimming.jpg,green_tea.jpg
+43,stress,8,child,other,Mild,0,0,underweight,sedentary,10,pranayama.jpg,brisk_walk.jpg,ginger_tea.jpg
+168,migraine,54,senior,male,Mild,0,0,overweight,Moderate,60,sukhasana.jpg,water_aerobics.jpg,turmeric_milk.jpg
+713,regular exercise,31,young_adult,female,Mild,0,0,overweight,sedentary,10,virabhadrasana.jpg,wall_push.jpg,chamomile_tea.jpg
+614,joint pain,45,adult,male,Mild,0,0,underweight,Moderate,10,navasana.jpg,yoga_flow.jpg,coconut_oil.jpg
+413,back pain,52,senior,other,Mild,0,0,normal,Moderate,10,marjaryasana.jpg,walking.jpg,head_massage_oil.jpg
+179,migraine,6,child,male,Moderate,1,0,overweight,active,60,bhramari.jpg,walking.jpg,chamomile_tea.jpg
+531,knee pain,53,senior,female,Moderate,0,0,normal,sedentary,15,gomukhasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+540,knee pain,40,adult,male,Mild,0,0,obese,active,30,pawanmuktasana.jpg,walking.jpg,head_massage_oil.jpg
+178,migraine,19,young_adult,other,Mild,0,0,obese,Moderate,45,shavasana.jpg,water_aerobics.jpg,chamomile_tea.jpg
+782,regular exercise,15,child,male,Mild,0,0,underweight,sedentary,60,shavasana.jpg,swimming.jpg,ashwagandha_tea.jpg
+765,regular exercise,34,young_adult,male,Mild,0,0,normal,sedentary,60,chaturanga.jpg,bodyweight_squats.jpg,ginger_tea.jpg
+258,pcod,54,senior,female,Severe,0,0,overweight,sedentary,10,baddha_konasana.jpg,chair_exercises.jpg,green_tea.jpg
+764,regular exercise,9,child,female,Mild,0,0,overweight,active,45,uttanasana.jpg,swimming.jpg,ginger_tea.jpg
+544,knee pain,24,young_adult,other,Mild,0,0,underweight,active,10,gomukhasana.jpg,walking.jpg,head_massage_oil.jpg
+16,stress,52,senior,male,Severe,0,0,obese,active,45,shavasana.jpg,walking.jpg,fenugreek_seeds.jpg
+4,stress,49,adult,other,Mild,0,0,obese,Moderate,10,anulom_vilom.jpg,chair_exercises.jpg,cinnamon_tea.jpg
+336,pcod,50,adult,female,Mild,0,0,underweight,sedentary,60,supta_baddha_konasana.jpg,jogging.jpg,chamomile_tea.jpg
+257,pcod,30,young_adult,female,Moderate,0,0,obese,sedentary,20,malasana.jpg,gentle_stretching.jpg,fenugreek_seeds.jpg
+581,joint pain,51,senior,other,Mild,0,0,normal,active,10,pawanmuktasana.jpg,water_aerobics.jpg,ashwagandha_powder.jpg
+446,back pain,54,senior,male,Severe,0,0,normal,active,20,cat_cow.jpg,chair_exercises.jpg,coconut_oil.jpg
+339,pcod,52,senior,female,Moderate,0,0,obese,sedentary,10,setu_bandhasana.jpg,water_aerobics.jpg,ginger_tea.jpg
+479,knee pain,36,adult,female,Moderate,0,0,normal,Moderate,45,cat_cow.jpg,tai_chi.jpg,head_massage_oil.jpg
+418,back pain,44,adult,male,Mild,0,0,normal,sedentary,10,ardha_matsyendrasana.jpg,stretching.jpg,warm_oil_massage.jpg
+639,joint pain,53,senior,male,Moderate,0,0,underweight,sedentary,15,cat_cow.jpg,gentle_stretching.jpg,turmeric_powder.jpg
+759,regular exercise,52,senior,male,Mild,0,0,normal,active,60,balasana.jpg,chair_exercises.jpg,turmeric_milk.jpg
+325,pcod,13,child,female,Moderate,0,0,overweight,active,10,setu_bandhasana.jpg,swimming.jpg,fenugreek_seeds.jpg
+458,knee pain,53,senior,other,Mild,0,0,obese,sedentary,10,pawanmuktasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+10,stress,43,adult,other,Mild,0,0,overweight,Moderate,15,kapalbhati.jpg,swimming.jpg,ginger_tea.jpg
+250,pcod,54,senior,female,Mild,0,0,underweight,active,15,supta_baddha_konasana.jpg,chair_exercises.jpg,ashwagandha_tea.jpg
+23,stress,12,child,female,Moderate,0,0,underweight,Moderate,60,anulom_vilom.jpg,swimming.jpg,lavender_tea.jpg
+222,migraine,52,senior,female,Mild,1,0,underweight,Moderate,45,sukhasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+548,knee pain,31,young_adult,male,Moderate,0,0,underweight,sedentary,15,gomukhasana.jpg,tai_chi.jpg,head_massage_oil.jpg
+689,regular exercise,53,senior,female,Mild,0,0,obese,sedentary,30,virabhadrasana.jpg,walking.jpg,lavender_tea.jpg
+783,regular exercise,11,child,male,Mild,0,0,normal,Moderate,20,shavasana.jpg,bodyweight_squats.jpg,ashwagandha_tea.jpg
+627,joint pain,13,child,male,Mild,0,0,underweight,Moderate,30,plank.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+341,pcod,22,young_adult,female,Mild,1,0,obese,sedentary,60,setu_bandhasana.jpg,water_aerobics.jpg,lavender_tea.jpg
+670,joint pain,8,child,other,Severe,0,0,obese,Moderate,20,cat_cow.jpg,chair_exercises.jpg,head_massage_oil.jpg
+204,migraine,20,young_adult,female,Mild,0,0,overweight,Moderate,30,bhramari.jpg,water_aerobics.jpg,head_massage_oil.jpg
+238,pcod,39,adult,female,Mild,0,0,underweight,active,10,setu_bandhasana.jpg,cycling.jpg,lavender_tea.jpg
+94,stress,46,adult,other,Moderate,1,0,underweight,active,45,shavasana.jpg,cycling.jpg,fenugreek_seeds.jpg
+532,knee pain,16,child,female,Moderate,0,0,overweight,active,45,cat_cow.jpg,pilates.jpg,warm_oil_massage.jpg
+363,back pain,52,senior,other,Mild,0,0,underweight,active,10,pawanmuktasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+545,knee pain,33,young_adult,other,Severe,0,0,overweight,active,60,cat_cow.jpg,walking.jpg,warm_oil_massage.jpg
+285,pcod,38,adult,female,Moderate,0,0,underweight,Moderate,20,setu_bandhasana.jpg,swimming.jpg,lavender_tea.jpg
+185,migraine,40,adult,male,Mild,0,0,overweight,sedentary,10,balasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+698,regular exercise,54,senior,female,Mild,0,0,normal,active,15,ardha_matsyendrasana.jpg,walking.jpg,lavender_tea.jpg
+397,back pain,52,senior,female,Mild,0,0,obese,sedentary,15,paschimottanasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+154,migraine,34,young_adult,female,Moderate,0,0,underweight,sedentary,60,viparita_karani.jpg,water_aerobics.jpg,coconut_oil.jpg
+76,stress,45,adult,male,Severe,0,1,obese,Moderate,45,sukhasana.jpg,walking.jpg,turmeric_milk.jpg
+454,back pain,16,child,female,Moderate,0,0,obese,sedentary,20,cat_cow.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+694,regular exercise,11,child,male,Mild,1,0,normal,sedentary,30,ardha_matsyendrasana.jpg,brisk_walk.jpg,ginger_tea.jpg
+278,pcod,53,senior,female,Mild,0,0,overweight,sedentary,20,setu_bandhasana.jpg,gentle_stretching.jpg,triphala.jpg
+69,stress,51,senior,male,Moderate,0,0,normal,active,45,balasana.jpg,walking.jpg,turmeric_powder.jpg
+515,knee pain,52,senior,male,Severe,0,0,obese,active,45,marjaryasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+189,migraine,52,senior,female,Mild,0,0,obese,active,15,bhramari.jpg,chair_exercises.jpg,coconut_oil.jpg
+272,pcod,51,senior,female,Mild,0,0,overweight,active,20,malasana.jpg,water_aerobics.jpg,amla_juice.jpg
+237,pcod,30,young_adult,female,Moderate,1,0,obese,active,30,supta_baddha_konasana.jpg,gentle_stretching.jpg,ginger_tea.jpg
+89,stress,51,senior,male,Moderate,0,0,underweight,Moderate,15,pranayama.jpg,gentle_stretching.jpg,triphala.jpg
+680,joint pain,39,adult,other,Mild,0,0,underweight,sedentary,20,navasana.jpg,tai_chi.jpg,coconut_oil.jpg
+118,migraine,52,senior,female,Mild,1,0,underweight,Moderate,20,viparita_karani.jpg,chair_exercises.jpg,chamomile_tea.jpg
+126,migraine,21,young_adult,other,Moderate,0,0,normal,Moderate,60,shavasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+659,joint pain,53,senior,female,Moderate,0,0,overweight,sedentary,15,plank.jpg,water_aerobics.jpg,head_massage_oil.jpg
+290,pcod,50,adult,female,Severe,0,0,underweight,active,10,malasana.jpg,brisk_walk.jpg,green_tea.jpg
+239,pcod,31,young_adult,female,Mild,1,0,underweight,Moderate,45,baddha_konasana.jpg,swimming.jpg,green_tea.jpg
+1,stress,12,child,other,Moderate,0,0,normal,active,20,sukhasana.jpg,cycling.jpg,cinnamon_tea.jpg
+790,regular exercise,51,senior,female,Mild,0,0,underweight,active,45,balasana.jpg,chair_exercises.jpg,green_tea.jpg
+603,joint pain,53,senior,female,Mild,0,0,overweight,Moderate,15,marjaryasana.jpg,walking.jpg,brahmi_powder.jpg
+699,regular exercise,17,child,female,Mild,0,0,obese,active,20,viparita_karani.jpg,walking.jpg,lavender_tea.jpg
+466,knee pain,51,senior,male,Severe,0,1,underweight,Moderate,30,marjaryasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+279,pcod,54,senior,female,Severe,0,0,normal,sedentary,30,baddha_konasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+625,joint pain,46,adult,male,Severe,0,0,obese,sedentary,15,gomukhasana.jpg,chair_exercises.jpg,ashwagandha_powder.jpg
+117,migraine,35,young_adult,male,Moderate,0,0,overweight,active,45,bhramari.jpg,chair_exercises.jpg,chamomile_tea.jpg
+229,pcod,12,child,female,Severe,0,0,normal,active,10,baddha_konasana.jpg,swimming.jpg,ashwagandha_tea.jpg
+755,regular exercise,52,senior,male,Mild,1,0,obese,sedentary,15,viparita_karani.jpg,gentle_stretching.jpg,turmeric_milk.jpg
+421,back pain,20,young_adult,other,Mild,0,0,underweight,Moderate,10,trikonasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+435,back pain,27,young_adult,male,Severe,0,0,obese,sedentary,45,uttanasana.jpg,walking.jpg,head_massage_oil.jpg
+275,pcod,42,adult,female,Mild,0,0,obese,sedentary,15,malasana.jpg,chair_exercises.jpg,cinnamon_tea.jpg
+319,pcod,12,child,female,Severe,0,0,obese,sedentary,15,baddha_konasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+552,knee pain,17,child,male,Severe,0,0,obese,Moderate,30,gomukhasana.jpg,walking.jpg,coconut_oil.jpg
+145,migraine,16,child,male,Severe,0,0,underweight,active,15,shavasana.jpg,walking.jpg,ashwagandha_tea.jpg
+750,regular exercise,12,child,male,Mild,0,0,underweight,active,15,ardha_matsyendrasana.jpg,resistance_band.jpg,lavender_tea.jpg
+734,regular exercise,29,young_adult,male,Mild,0,0,overweight,sedentary,10,virabhadrasana.jpg,jogging.jpg,green_tea.jpg
+725,regular exercise,53,senior,female,Mild,0,0,underweight,Moderate,10,trikonasana.jpg,gentle_stretching.jpg,lavender_tea.jpg
+586,joint pain,54,senior,other,Moderate,0,0,normal,active,60,cat_cow.jpg,gentle_stretching.jpg,brahmi_powder.jpg
+370,back pain,28,young_adult,male,Moderate,0,0,overweight,Moderate,30,paschimottanasana.jpg,bodyweight_squats.jpg,coconut_oil.jpg
+269,pcod,15,child,female,Moderate,0,0,obese,Moderate,20,malasana.jpg,walking.jpg,fenugreek_seeds.jpg
+568,knee pain,51,senior,female,Severe,0,0,overweight,active,15,cat_cow.jpg,chair_exercises.jpg,sesame_oil.jpg
+308,pcod,52,senior,female,Moderate,0,0,obese,Moderate,45,setu_bandhasana.jpg,gentle_stretching.jpg,cinnamon_tea.jpg
+311,pcod,31,young_adult,female,Moderate,0,0,overweight,active,10,setu_bandhasana.jpg,jogging.jpg,fenugreek_seeds.jpg
+452,back pain,53,senior,female,Mild,0,0,overweight,sedentary,30,ardha_matsyendrasana.jpg,water_aerobics.jpg,coconut_oil.jpg
+47,stress,20,young_adult,female,Severe,0,0,obese,sedentary,15,balasana.jpg,walking.jpg,ashwagandha_powder.jpg
+350,back pain,41,adult,male,Moderate,0,0,obese,sedentary,60,marjaryasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+372,back pain,42,adult,other,Moderate,0,0,underweight,Moderate,20,cat_cow.jpg,tai_chi.jpg,sesame_oil.jpg
+524,knee pain,9,child,other,Moderate,0,0,obese,active,10,cat_cow.jpg,chair_exercises.jpg,sesame_oil.jpg
+262,pcod,53,senior,female,Moderate,1,0,underweight,sedentary,30,baddha_konasana.jpg,walking.jpg,ginger_tea.jpg
+196,migraine,13,child,other,Mild,0,0,underweight,sedentary,45,balasana.jpg,walking.jpg,head_massage_oil.jpg
+798,regular exercise,31,young_adult,other,Mild,0,0,obese,sedentary,30,virabhadrasana.jpg,gentle_stretching.jpg,ginger_tea.jpg
+671,joint pain,51,senior,other,Moderate,0,0,overweight,active,30,gomukhasana.jpg,walking.jpg,warm_oil_massage.jpg
+108,stress,34,young_adult,male,Severe,0,0,overweight,Moderate,20,shavasana.jpg,jogging.jpg,triphala.jpg
+60,stress,51,senior,other,Severe,0,1,overweight,sedentary,60,balasana.jpg,water_aerobics.jpg,green_tea.jpg
+600,joint pain,15,child,male,Severe,0,0,normal,sedentary,10,pawanmuktasana.jpg,pilates.jpg,turmeric_powder.jpg
+440,back pain,37,adult,male,Severe,0,0,obese,sedentary,30,marjaryasana.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+101,stress,19,young_adult,other,Moderate,1,0,underweight,active,10,anulom_vilom.jpg,cycling.jpg,chamomile_tea.jpg
+478,knee pain,16,child,female,Mild,0,0,obese,Moderate,20,cat_cow.jpg,walking.jpg,warm_oil_massage.jpg
+717,regular exercise,29,young_adult,male,Mild,0,0,overweight,sedentary,45,navasana.jpg,brisk_walk.jpg,ginger_tea.jpg
+584,joint pain,28,young_adult,other,Severe,0,0,normal,sedentary,20,navasana.jpg,stretching.jpg,sesame_oil.jpg
+736,regular exercise,54,senior,male,Mild,0,0,underweight,active,10,balasana.jpg,walking.jpg,turmeric_milk.jpg
+180,migraine,31,young_adult,male,Mild,1,0,underweight,Moderate,60,shavasana.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+305,pcod,48,adult,female,Mild,0,1,obese,active,30,malasana.jpg,water_aerobics.jpg,ginger_tea.jpg
+430,back pain,51,senior,female,Mild,0,0,underweight,sedentary,10,ardha_matsyendrasana.jpg,water_aerobics.jpg,sesame_oil.jpg
+508,knee pain,29,young_adult,male,Moderate,1,0,overweight,sedentary,15,gomukhasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+769,regular exercise,26,young_adult,female,Mild,0,0,normal,sedentary,15,plank.jpg,brisk_walk.jpg,ashwagandha_tea.jpg
+150,migraine,10,child,other,Mild,1,0,underweight,active,30,anulom_vilom.jpg,walking.jpg,coconut_oil.jpg
+125,migraine,13,child,other,Moderate,0,0,underweight,sedentary,20,viparita_karani.jpg,chair_exercises.jpg,ashwagandha_tea.jpg
+635,joint pain,13,child,female,Moderate,0,0,overweight,sedentary,10,cat_cow.jpg,chair_exercises.jpg,head_massage_oil.jpg
+696,regular exercise,51,senior,male,Mild,1,0,overweight,Moderate,60,trikonasana.jpg,walking.jpg,green_tea.jpg
+186,migraine,32,young_adult,female,Mild,0,0,underweight,sedentary,45,pranayama.jpg,water_aerobics.jpg,lavender_tea.jpg
+542,knee pain,26,young_adult,male,Severe,0,1,normal,active,60,pawanmuktasana.jpg,tai_chi.jpg,sesame_oil.jpg
+51,stress,54,senior,female,Mild,0,0,underweight,Moderate,45,viparita_karani.jpg,water_aerobics.jpg,turmeric_milk.jpg
+488,knee pain,12,child,male,Moderate,0,0,normal,sedentary,60,pawanmuktasana.jpg,pilates.jpg,coconut_oil.jpg
+788,regular exercise,8,child,other,Mild,0,0,normal,active,60,viparita_karani.jpg,bodyweight_squats.jpg,ashwagandha_tea.jpg
+486,knee pain,13,child,other,Moderate,0,0,underweight,sedentary,45,pawanmuktasana.jpg,tai_chi.jpg,sesame_oil.jpg
+322,pcod,25,young_adult,female,Moderate,0,0,overweight,Moderate,10,setu_bandhasana.jpg,brisk_walk.jpg,ashwagandha_tea.jpg
+354,back pain,26,young_adult,male,Severe,0,0,obese,active,45,ardha_matsyendrasana.jpg,walking.jpg,sesame_oil.jpg
+738,regular exercise,10,child,other,Mild,0,0,overweight,active,10,trikonasana.jpg,wall_push.jpg,ginger_tea.jpg
+143,migraine,52,senior,male,Mild,0,0,normal,active,45,kapalbhati.jpg,walking.jpg,sesame_oil.jpg
+371,back pain,39,adult,female,Severe,0,0,overweight,active,30,trikonasana.jpg,wall_push.jpg,coconut_oil.jpg
+142,migraine,23,young_adult,male,Mild,0,0,underweight,sedentary,60,sukhasana.jpg,chair_exercises.jpg,lavender_tea.jpg
+400,back pain,53,senior,other,Moderate,0,0,normal,active,60,pawanmuktasana.jpg,walking.jpg,head_massage_oil.jpg
+264,pcod,35,young_adult,female,Moderate,0,0,underweight,sedentary,30,supta_baddha_konasana.jpg,brisk_walk.jpg,triphala.jpg
+321,pcod,9,child,female,Moderate,0,0,overweight,Moderate,45,baddha_konasana.jpg,brisk_walk.jpg,fenugreek_seeds.jpg
+20,stress,41,adult,other,Mild,0,0,underweight,active,15,kapalbhati.jpg,cycling.jpg,cinnamon_tea.jpg
+173,migraine,25,young_adult,male,Mild,0,1,underweight,Moderate,15,anulom_vilom.jpg,walking.jpg,ashwagandha_tea.jpg
+652,joint pain,53,senior,male,Mild,0,0,normal,active,60,virabhadrasana.jpg,water_aerobics.jpg,turmeric_powder.jpg
+313,pcod,49,adult,female,Mild,0,0,overweight,sedentary,60,setu_bandhasana.jpg,jogging.jpg,fenugreek_seeds.jpg
+391,back pain,6,child,other,Mild,0,0,underweight,Moderate,30,trikonasana.jpg,resistance_band.jpg,warm_oil_massage.jpg
+744,regular exercise,45,adult,other,Mild,0,0,underweight,Moderate,20,uttanasana.jpg,cycling.jpg,ginger_tea.jpg
+13,stress,38,adult,female,Severe,0,0,underweight,active,30,kapalbhati.jpg,swimming.jpg,turmeric_milk.jpg
+408,back pain,24,young_adult,male,Severe,1,0,overweight,active,20,cat_cow.jpg,resistance_band.jpg,coconut_oil.jpg
+409,back pain,54,senior,male,Mild,0,0,overweight,Moderate,30,trikonasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+306,pcod,34,young_adult,female,Moderate,0,0,obese,Moderate,45,baddha_konasana.jpg,walking.jpg,lavender_tea.jpg
+355,back pain,48,adult,other,Mild,0,0,overweight,sedentary,10,uttanasana.jpg,resistance_band.jpg,warm_oil_massage.jpg
+26,stress,52,senior,female,Mild,0,0,obese,active,30,balasana.jpg,gentle_stretching.jpg,amla_juice.jpg
+598,joint pain,24,young_adult,female,Moderate,0,0,overweight,active,20,chaturanga.jpg,yoga_flow.jpg,coconut_oil.jpg
+170,migraine,53,senior,female,Severe,0,1,normal,active,45,sukhasana.jpg,walking.jpg,chamomile_tea.jpg
+39,stress,36,adult,other,Severe,0,0,normal,sedentary,10,viparita_karani.jpg,jogging.jpg,triphala.jpg
+176,migraine,28,young_adult,other,Mild,0,0,underweight,sedentary,10,kapalbhati.jpg,gentle_stretching.jpg,ginger_tea.jpg
+246,pcod,51,senior,female,Moderate,0,0,underweight,sedentary,60,malasana.jpg,water_aerobics.jpg,cinnamon_tea.jpg
+299,pcod,48,adult,female,Moderate,0,0,normal,sedentary,60,supta_baddha_konasana.jpg,brisk_walk.jpg,lavender_tea.jpg
+667,joint pain,45,adult,other,Mild,0,0,overweight,sedentary,45,gomukhasana.jpg,tai_chi.jpg,head_massage_oil.jpg
+417,back pain,52,senior,other,Severe,0,0,normal,active,10,paschimottanasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+549,knee pain,18,young_adult,male,Mild,0,0,normal,active,60,marjaryasana.jpg,yoga_flow.jpg,sesame_oil.jpg
+273,pcod,52,senior,female,Moderate,0,0,underweight,sedentary,30,malasana.jpg,walking.jpg,cinnamon_tea.jpg
+612,joint pain,9,child,other,Moderate,0,0,normal,active,45,marjaryasana.jpg,tai_chi.jpg,ashwagandha_powder.jpg
+155,migraine,52,senior,male,Moderate,0,0,normal,Moderate,10,anulom_vilom.jpg,gentle_stretching.jpg,ginger_tea.jpg
+127,migraine,53,senior,female,Moderate,0,0,obese,active,30,kapalbhati.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+450,back pain,21,young_adult,other,Moderate,0,0,overweight,active,60,paschimottanasana.jpg,stretching.jpg,coconut_oil.jpg
+572,joint pain,54,senior,male,Severe,0,0,normal,Moderate,45,virabhadrasana.jpg,gentle_stretching.jpg,brahmi_powder.jpg
+342,pcod,41,adult,female,Mild,0,0,normal,Moderate,30,supta_baddha_konasana.jpg,jogging.jpg,triphala.jpg
+431,back pain,31,young_adult,male,Severe,0,0,underweight,active,10,marjaryasana.jpg,bodyweight_squats.jpg,coconut_oil.jpg
+288,pcod,51,senior,female,Moderate,0,0,obese,sedentary,20,supta_baddha_konasana.jpg,chair_exercises.jpg,lavender_tea.jpg
+114,stress,10,child,female,Severe,1,0,underweight,active,45,viparita_karani.jpg,cycling.jpg,turmeric_powder.jpg
+500,knee pain,51,senior,male,Mild,0,0,normal,Moderate,30,gomukhasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+174,migraine,12,child,other,Moderate,0,0,normal,active,15,sukhasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+360,back pain,10,child,male,Mild,0,0,obese,active,10,gomukhasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+483,knee pain,46,adult,female,Severe,0,0,overweight,sedentary,45,marjaryasana.jpg,tai_chi.jpg,coconut_oil.jpg
+58,stress,17,child,female,Mild,0,0,underweight,Moderate,10,kapalbhati.jpg,cycling.jpg,ashwagandha_tea.jpg
+553,knee pain,9,child,other,Moderate,0,0,underweight,Moderate,60,pawanmuktasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+223,migraine,53,senior,other,Severe,0,1,overweight,active,45,kapalbhati.jpg,chair_exercises.jpg,turmeric_milk.jpg
+281,pcod,37,adult,female,Severe,0,0,normal,Moderate,10,baddha_konasana.jpg,jogging.jpg,turmeric_milk.jpg
+18,stress,35,young_adult,other,Moderate,0,1,normal,sedentary,20,bhramari.jpg,brisk_walk.jpg,turmeric_powder.jpg
+128,migraine,34,young_adult,male,Mild,0,1,underweight,active,45,shavasana.jpg,walking.jpg,warm_oil_massage.jpg
+323,pcod,9,child,female,Mild,0,0,normal,Moderate,60,setu_bandhasana.jpg,jogging.jpg,lavender_tea.jpg
+256,pcod,52,senior,female,Moderate,1,0,obese,active,45,malasana.jpg,gentle_stretching.jpg,ashwagandha_tea.jpg
+539,knee pain,35,young_adult,female,Moderate,0,0,overweight,active,60,pawanmuktasana.jpg,pilates.jpg,coconut_oil.jpg
+471,knee pain,24,young_adult,male,Moderate,0,0,normal,sedentary,10,cat_cow.jpg,chair_exercises.jpg,coconut_oil.jpg
+599,joint pain,43,adult,male,Severe,0,0,obese,Moderate,30,marjaryasana.jpg,water_aerobics.jpg,brahmi_powder.jpg
+469,knee pain,12,child,male,Mild,0,0,obese,Moderate,15,gomukhasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+767,regular exercise,52,senior,female,Mild,0,0,overweight,Moderate,60,viparita_karani.jpg,water_aerobics.jpg,ashwagandha_tea.jpg
+191,migraine,11,child,female,Mild,0,0,underweight,sedentary,60,shavasana.jpg,chair_exercises.jpg,green_tea.jpg
+116,migraine,29,young_adult,other,Mild,0,0,overweight,active,30,kapalbhati.jpg,gentle_stretching.jpg,sesame_oil.jpg
+517,knee pain,34,young_adult,male,Severe,0,1,overweight,Moderate,15,cat_cow.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+708,regular exercise,29,young_adult,female,Mild,0,0,underweight,Moderate,15,trikonasana.jpg,brisk_walk.jpg,green_tea.jpg
+536,knee pain,54,senior,other,Moderate,0,0,overweight,active,15,pawanmuktasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+95,stress,12,child,other,Moderate,0,0,normal,Moderate,10,anulom_vilom.jpg,cycling.jpg,ashwagandha_tea.jpg
+181,migraine,52,senior,female,Moderate,0,0,overweight,Moderate,45,kapalbhati.jpg,walking.jpg,sesame_oil.jpg
+302,pcod,53,senior,female,Moderate,0,1,overweight,sedentary,20,setu_bandhasana.jpg,gentle_stretching.jpg,turmeric_milk.jpg
+617,joint pain,51,senior,female,Mild,0,0,normal,active,15,virabhadrasana.jpg,water_aerobics.jpg,sesame_oil.jpg
+582,joint pain,12,child,female,Moderate,0,0,underweight,Moderate,60,virabhadrasana.jpg,walking.jpg,brahmi_powder.jpg
+591,joint pain,53,senior,other,Moderate,0,0,normal,Moderate,20,gomukhasana.jpg,water_aerobics.jpg,coconut_oil.jpg
+730,regular exercise,20,young_adult,male,Mild,0,0,obese,sedentary,60,sukhasana.jpg,chair_exercises.jpg,turmeric_milk.jpg
+559,knee pain,40,adult,male,Severe,0,0,normal,Moderate,30,marjaryasana.jpg,pilates.jpg,head_massage_oil.jpg
+707,regular exercise,35,young_adult,other,Mild,0,0,obese,sedentary,20,trikonasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+543,knee pain,8,child,other,Mild,1,0,normal,sedentary,30,marjaryasana.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+6,stress,53,senior,other,Moderate,0,1,obese,Moderate,15,sukhasana.jpg,walking.jpg,lavender_tea.jpg
+784,regular exercise,8,child,female,Mild,0,0,overweight,sedentary,60,uttanasana.jpg,brisk_walk.jpg,turmeric_milk.jpg
+46,stress,6,child,female,Moderate,0,0,normal,Moderate,60,sukhasana.jpg,brisk_walk.jpg,green_tea.jpg
+724,regular exercise,22,young_adult,male,Mild,0,0,overweight,active,60,uttanasana.jpg,resistance_band.jpg,green_tea.jpg
+158,migraine,47,adult,male,Moderate,0,0,overweight,Moderate,45,shavasana.jpg,chair_exercises.jpg,turmeric_milk.jpg
+606,joint pain,12,child,other,Severe,0,0,underweight,Moderate,15,cat_cow.jpg,gentle_stretching.jpg,coconut_oil.jpg
+172,migraine,35,young_adult,male,Mild,0,0,normal,Moderate,15,bhramari.jpg,walking.jpg,chamomile_tea.jpg
+17,stress,35,young_adult,other,Moderate,0,0,overweight,active,15,anulom_vilom.jpg,swimming.jpg,triphala.jpg
+512,knee pain,46,adult,female,Moderate,0,0,underweight,Moderate,30,pawanmuktasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+49,stress,53,senior,other,Severe,0,0,normal,active,45,bhramari.jpg,water_aerobics.jpg,chamomile_tea.jpg
+773,regular exercise,38,adult,other,Mild,0,1,normal,sedentary,15,chaturanga.jpg,bodyweight_squats.jpg,chamomile_tea.jpg
+756,regular exercise,39,adult,other,Mild,0,0,obese,active,60,ardha_matsyendrasana.jpg,chair_exercises.jpg,green_tea.jpg
+481,knee pain,45,adult,female,Moderate,1,0,overweight,sedentary,10,pawanmuktasana.jpg,pilates.jpg,warm_oil_massage.jpg
+284,pcod,53,senior,female,Moderate,0,0,overweight,active,15,malasana.jpg,chair_exercises.jpg,amla_juice.jpg
+537,knee pain,25,young_adult,other,Mild,0,0,underweight,sedentary,60,gomukhasana.jpg,yoga_flow.jpg,warm_oil_massage.jpg
+226,migraine,33,young_adult,female,Moderate,0,0,normal,Moderate,15,anulom_vilom.jpg,walking.jpg,turmeric_milk.jpg
+27,stress,11,child,female,Severe,0,0,normal,sedentary,60,kapalbhati.jpg,brisk_walk.jpg,cinnamon_tea.jpg
+631,joint pain,6,child,female,Severe,1,0,overweight,active,45,cat_cow.jpg,tai_chi.jpg,sesame_oil.jpg
+438,back pain,23,young_adult,other,Severe,0,0,normal,active,20,paschimottanasana.jpg,resistance_band.jpg,warm_oil_massage.jpg
+365,back pain,54,senior,male,Severe,0,0,normal,Moderate,20,pawanmuktasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+230,pcod,27,young_adult,female,Moderate,0,0,normal,Moderate,30,setu_bandhasana.jpg,brisk_walk.jpg,fenugreek_seeds.jpg
+38,stress,18,young_adult,male,Severe,0,0,overweight,Moderate,15,bhramari.jpg,jogging.jpg,brahmi_powder.jpg
+768,regular exercise,49,adult,other,Mild,1,0,underweight,Moderate,45,chaturanga.jpg,wall_push.jpg,ginger_tea.jpg
+375,back pain,51,senior,male,Severe,0,0,normal,Moderate,45,uttanasana.jpg,walking.jpg,warm_oil_massage.jpg
+470,knee pain,23,young_adult,male,Moderate,0,0,normal,active,45,pawanmuktasana.jpg,yoga_flow.jpg,warm_oil_massage.jpg
+778,regular exercise,8,child,female,Mild,0,0,underweight,Moderate,60,navasana.jpg,wall_push.jpg,lavender_tea.jpg
+681,joint pain,43,adult,female,Severe,0,0,underweight,active,10,pawanmuktasana.jpg,water_aerobics.jpg,sesame_oil.jpg
+693,regular exercise,35,young_adult,male,Mild,0,0,normal,Moderate,15,uttanasana.jpg,bodyweight_squats.jpg,ginger_tea.jpg
+195,migraine,24,young_adult,female,Mild,1,0,normal,Moderate,10,anulom_vilom.jpg,water_aerobics.jpg,turmeric_milk.jpg
+683,joint pain,52,senior,male,Mild,0,0,normal,active,20,plank.jpg,chair_exercises.jpg,head_massage_oil.jpg
+692,regular exercise,46,adult,other,Mild,0,0,underweight,sedentary,15,ardha_matsyendrasana.jpg,bodyweight_squats.jpg,ashwagandha_tea.jpg
+504,knee pain,48,adult,female,Mild,0,0,obese,sedentary,15,marjaryasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+772,regular exercise,14,child,other,Mild,0,0,overweight,Moderate,15,paschimottanasana.jpg,resistance_band.jpg,ginger_tea.jpg
+668,joint pain,31,young_adult,other,Mild,0,0,underweight,active,15,chaturanga.jpg,pilates.jpg,ashwagandha_powder.jpg
+771,regular exercise,37,adult,male,Mild,0,0,overweight,Moderate,20,viparita_karani.jpg,resistance_band.jpg,ashwagandha_tea.jpg
+163,migraine,54,senior,female,Moderate,0,0,obese,Moderate,60,shavasana.jpg,water_aerobics.jpg,green_tea.jpg
+645,joint pain,45,adult,female,Mild,1,0,overweight,active,60,marjaryasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+153,migraine,41,adult,other,Moderate,0,0,underweight,sedentary,30,anulom_vilom.jpg,chair_exercises.jpg,green_tea.jpg
+558,knee pain,20,young_adult,female,Mild,0,0,obese,Moderate,60,pawanmuktasana.jpg,walking.jpg,warm_oil_massage.jpg
+573,joint pain,45,adult,female,Moderate,0,0,normal,active,20,marjaryasana.jpg,yoga_flow.jpg,brahmi_powder.jpg
+674,joint pain,11,child,male,Mild,0,0,underweight,Moderate,45,gomukhasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+112,stress,9,child,male,Mild,0,0,normal,sedentary,30,bhramari.jpg,swimming.jpg,brahmi_powder.jpg
+227,migraine,32,young_adult,other,Mild,0,0,obese,Moderate,15,shavasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+791,regular exercise,8,child,other,Mild,0,0,overweight,Moderate,45,uttanasana.jpg,wall_push.jpg,turmeric_milk.jpg
+104,stress,13,child,female,Moderate,0,0,obese,Moderate,10,balasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+422,back pain,10,child,male,Moderate,0,0,obese,Moderate,20,gomukhasana.jpg,gentle_stretching.jpg,coconut_oil.jpg
+420,back pain,51,senior,male,Mild,0,0,normal,Moderate,20,gomukhasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+120,migraine,52,senior,other,Mild,0,0,underweight,active,30,anulom_vilom.jpg,water_aerobics.jpg,chamomile_tea.jpg
+54,stress,16,child,female,Mild,0,0,normal,Moderate,45,shavasana.jpg,swimming.jpg,amla_juice.jpg
+152,migraine,30,young_adult,female,Mild,0,0,overweight,sedentary,30,anulom_vilom.jpg,walking.jpg,coconut_oil.jpg
+404,back pain,12,child,other,Mild,0,0,obese,Moderate,30,pawanmuktasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+752,regular exercise,44,adult,male,Mild,0,0,overweight,Moderate,10,trikonasana.jpg,brisk_walk.jpg,turmeric_milk.jpg
+208,migraine,27,young_adult,other,Severe,0,0,obese,sedentary,15,sukhasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+676,joint pain,34,young_adult,male,Mild,0,0,overweight,active,30,chaturanga.jpg,pilates.jpg,brahmi_powder.jpg
+619,joint pain,28,young_adult,female,Moderate,0,0,normal,sedentary,10,navasana.jpg,pilates.jpg,coconut_oil.jpg
+9,stress,12,child,female,Severe,1,0,overweight,active,15,balasana.jpg,brisk_walk.jpg,amla_juice.jpg
+650,joint pain,33,young_adult,male,Mild,0,1,obese,active,10,marjaryasana.jpg,chair_exercises.jpg,ashwagandha_powder.jpg
+37,stress,54,senior,other,Mild,0,0,underweight,Moderate,15,kapalbhati.jpg,walking.jpg,amla_juice.jpg
+453,back pain,41,adult,male,Moderate,1,1,overweight,Moderate,20,gomukhasana.jpg,push_ups.jpg,head_massage_oil.jpg
+254,pcod,53,senior,female,Severe,0,0,normal,active,60,supta_baddha_konasana.jpg,walking.jpg,ashwagandha_tea.jpg
+304,pcod,40,adult,female,Moderate,0,0,underweight,Moderate,60,supta_baddha_konasana.jpg,brisk_walk.jpg,cinnamon_tea.jpg
+607,joint pain,52,senior,female,Moderate,0,0,normal,sedentary,60,virabhadrasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+580,joint pain,33,young_adult,female,Mild,0,0,overweight,Moderate,45,plank.jpg,stretching.jpg,brahmi_powder.jpg
+588,joint pain,7,child,other,Moderate,0,1,underweight,sedentary,30,cat_cow.jpg,yoga_flow.jpg,warm_oil_massage.jpg
+263,pcod,29,young_adult,female,Mild,0,0,underweight,active,20,malasana.jpg,swimming.jpg,green_tea.jpg
+298,pcod,47,adult,female,Mild,0,0,obese,sedentary,60,malasana.jpg,walking.jpg,ginger_tea.jpg
+415,back pain,14,child,other,Moderate,0,0,overweight,Moderate,60,uttanasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+151,migraine,54,senior,female,Severe,0,0,overweight,Moderate,20,pranayama.jpg,walking.jpg,lavender_tea.jpg
+637,joint pain,40,adult,other,Mild,0,0,underweight,sedentary,45,pawanmuktasana.jpg,gentle_stretching.jpg,ashwagandha_powder.jpg
+711,regular exercise,14,child,other,Mild,0,1,obese,Moderate,60,virabhadrasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+551,knee pain,13,child,other,Severe,0,0,underweight,Moderate,30,gomukhasana.jpg,stretching.jpg,sesame_oil.jpg
+489,knee pain,50,adult,other,Severe,0,0,normal,active,45,pawanmuktasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+148,migraine,12,child,male,Severe,0,0,underweight,sedentary,10,kapalbhati.jpg,water_aerobics.jpg,ginger_tea.jpg
+147,migraine,40,adult,female,Moderate,0,0,overweight,sedentary,20,pranayama.jpg,water_aerobics.jpg,green_tea.jpg
+589,joint pain,51,senior,female,Mild,0,0,normal,Moderate,30,cat_cow.jpg,water_aerobics.jpg,head_massage_oil.jpg
+741,regular exercise,21,young_adult,other,Mild,0,0,overweight,sedentary,20,balasana.jpg,jogging.jpg,chamomile_tea.jpg
+602,joint pain,38,adult,female,Mild,0,0,normal,sedentary,30,pawanmuktasana.jpg,pilates.jpg,brahmi_powder.jpg
+349,back pain,11,child,male,Moderate,0,0,obese,Moderate,15,gomukhasana.jpg,water_aerobics.jpg,coconut_oil.jpg
+464,knee pain,51,senior,male,Moderate,0,0,normal,sedentary,10,gomukhasana.jpg,walking.jpg,warm_oil_massage.jpg
+326,pcod,53,senior,female,Moderate,0,0,normal,Moderate,20,baddha_konasana.jpg,walking.jpg,cinnamon_tea.jpg
+187,migraine,43,adult,female,Moderate,1,0,obese,sedentary,10,pranayama.jpg,walking.jpg,chamomile_tea.jpg
+124,migraine,16,child,female,Severe,0,0,obese,Moderate,45,anulom_vilom.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+761,regular exercise,7,child,male,Mild,0,0,overweight,active,45,shavasana.jpg,bodyweight_squats.jpg,chamomile_tea.jpg
+144,migraine,54,senior,female,Severe,0,0,normal,active,60,viparita_karani.jpg,gentle_stretching.jpg,ashwagandha_tea.jpg
+762,regular exercise,52,senior,female,Mild,0,0,normal,active,20,ardha_matsyendrasana.jpg,walking.jpg,green_tea.jpg
+198,migraine,48,adult,female,Mild,0,0,underweight,Moderate,60,kapalbhati.jpg,water_aerobics.jpg,sesame_oil.jpg
+280,pcod,6,child,female,Mild,0,1,obese,active,30,malasana.jpg,chair_exercises.jpg,green_tea.jpg
+294,pcod,52,senior,female,Mild,0,0,normal,Moderate,45,supta_baddha_konasana.jpg,water_aerobics.jpg,ashwagandha_tea.jpg
+401,back pain,12,child,male,Moderate,0,0,overweight,Moderate,45,uttanasana.jpg,yoga_flow.jpg,coconut_oil.jpg
+123,migraine,16,child,male,Moderate,0,0,normal,active,10,anulom_vilom.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+184,migraine,37,adult,other,Moderate,0,0,obese,sedentary,45,balasana.jpg,walking.jpg,warm_oil_massage.jpg
+203,migraine,49,adult,male,Severe,0,0,underweight,Moderate,10,viparita_karani.jpg,gentle_stretching.jpg,ashwagandha_tea.jpg
+439,back pain,38,adult,male,Moderate,0,0,underweight,Moderate,15,gomukhasana.jpg,stretching.jpg,sesame_oil.jpg
+247,pcod,15,child,female,Moderate,0,0,underweight,sedentary,45,baddha_konasana.jpg,swimming.jpg,triphala.jpg
+416,back pain,15,child,female,Moderate,0,0,normal,Moderate,15,pawanmuktasana.jpg,resistance_band.jpg,warm_oil_massage.jpg
+710,regular exercise,26,young_adult,male,Mild,0,0,overweight,active,10,virabhadrasana.jpg,resistance_band.jpg,turmeric_milk.jpg
+130,migraine,47,adult,other,Mild,0,0,underweight,Moderate,60,shavasana.jpg,water_aerobics.jpg,green_tea.jpg
+403,back pain,54,senior,male,Moderate,0,0,overweight,sedentary,45,pawanmuktasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+633,joint pain,54,senior,male,Severe,0,0,overweight,sedentary,45,marjaryasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+624,joint pain,43,adult,male,Severe,0,1,overweight,Moderate,30,navasana.jpg,gentle_stretching.jpg,ashwagandha_powder.jpg
+726,regular exercise,11,child,female,Mild,0,0,overweight,active,30,paschimottanasana.jpg,jogging.jpg,green_tea.jpg
+220,migraine,22,young_adult,female,Moderate,0,0,overweight,Moderate,30,balasana.jpg,water_aerobics.jpg,sesame_oil.jpg
+728,regular exercise,54,senior,female,Mild,0,0,overweight,sedentary,15,balasana.jpg,walking.jpg,lavender_tea.jpg
+610,joint pain,11,child,other,Severe,0,0,overweight,sedentary,30,gomukhasana.jpg,chair_exercises.jpg,ashwagandha_powder.jpg
+731,regular exercise,37,adult,other,Mild,0,1,normal,active,30,ardha_matsyendrasana.jpg,push_ups.jpg,ashwagandha_tea.jpg
+618,joint pain,25,young_adult,male,Severe,0,0,underweight,sedentary,30,pawanmuktasana.jpg,tai_chi.jpg,head_massage_oil.jpg
+387,back pain,20,young_adult,female,Mild,0,0,underweight,Moderate,30,uttanasana.jpg,push_ups.jpg,head_massage_oil.jpg
+774,regular exercise,54,senior,other,Mild,0,0,obese,active,60,ardha_matsyendrasana.jpg,walking.jpg,ginger_tea.jpg
+510,knee pain,40,adult,female,Mild,0,0,obese,Moderate,15,marjaryasana.jpg,walking.jpg,head_massage_oil.jpg
+268,pcod,50,adult,female,Severe,1,1,overweight,sedentary,10,malasana.jpg,brisk_walk.jpg,chamomile_tea.jpg
+660,joint pain,11,child,female,Severe,0,0,underweight,Moderate,10,gomukhasana.jpg,yoga_flow.jpg,turmeric_powder.jpg
+442,back pain,35,young_adult,other,Moderate,0,0,obese,active,20,paschimottanasana.jpg,walking.jpg,coconut_oil.jpg
+497,knee pain,47,adult,other,Mild,0,0,normal,Moderate,15,cat_cow.jpg,yoga_flow.jpg,head_massage_oil.jpg
+113,stress,11,child,other,Severe,0,0,normal,active,60,sukhasana.jpg,swimming.jpg,amla_juice.jpg
+233,pcod,44,adult,female,Moderate,0,0,overweight,active,20,baddha_konasana.jpg,cycling.jpg,chamomile_tea.jpg
+697,regular exercise,54,senior,male,Mild,0,0,overweight,sedentary,10,paschimottanasana.jpg,gentle_stretching.jpg,turmeric_milk.jpg
+608,joint pain,47,adult,male,Mild,0,0,underweight,sedentary,30,cat_cow.jpg,water_aerobics.jpg,coconut_oil.jpg
+374,back pain,36,adult,male,Mild,0,0,underweight,Moderate,60,pawanmuktasana.jpg,tai_chi.jpg,sesame_oil.jpg
+234,pcod,32,young_adult,female,Moderate,0,0,obese,sedentary,30,supta_baddha_konasana.jpg,water_aerobics.jpg,green_tea.jpg
+634,joint pain,8,child,other,Moderate,0,0,normal,sedentary,60,cat_cow.jpg,stretching.jpg,ashwagandha_powder.jpg
+318,pcod,24,young_adult,female,Severe,0,0,obese,active,15,setu_bandhasana.jpg,walking.jpg,turmeric_milk.jpg
+411,back pain,38,adult,other,Moderate,0,0,overweight,active,60,ardha_matsyendrasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+716,regular exercise,31,young_adult,female,Mild,0,0,overweight,Moderate,20,navasana.jpg,resistance_band.jpg,ashwagandha_tea.jpg
+359,back pain,6,child,female,Moderate,0,0,underweight,Moderate,10,cat_cow.jpg,bodyweight_squats.jpg,sesame_oil.jpg
+259,pcod,17,child,female,Mild,0,1,obese,Moderate,45,malasana.jpg,walking.jpg,lavender_tea.jpg
+628,joint pain,10,child,male,Mild,0,0,underweight,Moderate,20,marjaryasana.jpg,yoga_flow.jpg,ashwagandha_powder.jpg
+283,pcod,39,adult,female,Severe,0,1,underweight,Moderate,60,setu_bandhasana.jpg,swimming.jpg,amla_juice.jpg
+377,back pain,53,senior,female,Moderate,0,0,obese,active,20,pawanmuktasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+385,back pain,52,senior,male,Moderate,0,1,underweight,active,30,trikonasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+225,migraine,49,adult,male,Severe,0,0,obese,sedentary,30,shavasana.jpg,gentle_stretching.jpg,ashwagandha_tea.jpg
+758,regular exercise,17,child,other,Mild,0,0,overweight,sedentary,15,virabhadrasana.jpg,wall_push.jpg,ashwagandha_tea.jpg
+656,joint pain,7,child,other,Moderate,0,0,obese,Moderate,15,navasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+473,knee pain,13,child,female,Severe,0,0,normal,Moderate,30,cat_cow.jpg,gentle_stretching.jpg,sesame_oil.jpg
+348,back pain,52,senior,female,Severe,0,0,overweight,active,45,gomukhasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+506,knee pain,26,young_adult,male,Severe,0,0,normal,Moderate,30,gomukhasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+787,regular exercise,15,child,female,Mild,0,0,normal,active,15,shavasana.jpg,cycling.jpg,green_tea.jpg
+739,regular exercise,52,senior,female,Mild,0,0,overweight,Moderate,60,plank.jpg,gentle_stretching.jpg,green_tea.jpg
+721,regular exercise,14,child,female,Mild,0,0,normal,active,20,navasana.jpg,cycling.jpg,green_tea.jpg
+620,joint pain,7,child,male,Mild,0,0,overweight,active,30,plank.jpg,walking.jpg,ashwagandha_powder.jpg
+684,joint pain,8,child,other,Mild,0,0,normal,active,10,virabhadrasana.jpg,yoga_flow.jpg,turmeric_powder.jpg
+677,joint pain,22,young_adult,female,Moderate,0,0,obese,sedentary,30,navasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+557,knee pain,24,young_adult,male,Mild,0,1,overweight,sedentary,20,gomukhasana.jpg,tai_chi.jpg,coconut_oil.jpg
+578,joint pain,8,child,female,Moderate,0,0,underweight,sedentary,30,pawanmuktasana.jpg,water_aerobics.jpg,ashwagandha_powder.jpg
+86,stress,25,young_adult,male,Moderate,0,0,overweight,sedentary,45,anulom_vilom.jpg,cycling.jpg,amla_juice.jpg
+243,pcod,54,senior,female,Severe,0,0,overweight,active,60,supta_baddha_konasana.jpg,walking.jpg,lavender_tea.jpg
+160,migraine,21,young_adult,other,Moderate,0,0,normal,active,45,shavasana.jpg,chair_exercises.jpg,ashwagandha_tea.jpg
+525,knee pain,42,adult,other,Moderate,0,1,normal,sedentary,45,pawanmuktasana.jpg,water_aerobics.jpg,sesame_oil.jpg
+36,stress,52,senior,other,Mild,1,0,underweight,active,15,viparita_karani.jpg,gentle_stretching.jpg,triphala.jpg
+541,knee pain,24,young_adult,female,Severe,1,0,normal,sedentary,20,marjaryasana.jpg,pilates.jpg,warm_oil_massage.jpg
+171,migraine,27,young_adult,female,Mild,1,0,underweight,sedentary,20,balasana.jpg,gentle_stretching.jpg,coconut_oil.jpg
+655,joint pain,32,young_adult,other,Severe,0,0,normal,active,20,plank.jpg,water_aerobics.jpg,ashwagandha_powder.jpg
+686,regular exercise,54,senior,other,Mild,0,0,obese,active,10,paschimottanasana.jpg,gentle_stretching.jpg,ginger_tea.jpg
+678,joint pain,17,child,female,Moderate,0,1,underweight,sedentary,30,virabhadrasana.jpg,pilates.jpg,ashwagandha_powder.jpg
+751,regular exercise,54,senior,other,Mild,0,0,obese,Moderate,60,balasana.jpg,water_aerobics.jpg,ginger_tea.jpg
+96,stress,17,child,other,Severe,0,0,normal,sedentary,20,kapalbhati.jpg,jogging.jpg,amla_juice.jpg
+564,knee pain,11,child,male,Moderate,0,0,underweight,active,45,cat_cow.jpg,gentle_stretching.jpg,sesame_oil.jpg
+241,pcod,53,senior,female,Severe,0,0,underweight,active,30,setu_bandhasana.jpg,chair_exercises.jpg,lavender_tea.jpg
+575,joint pain,30,young_adult,other,Moderate,0,0,normal,Moderate,60,plank.jpg,chair_exercises.jpg,coconut_oil.jpg
+461,knee pain,46,adult,male,Mild,0,1,underweight,active,15,marjaryasana.jpg,stretching.jpg,head_massage_oil.jpg
+554,knee pain,54,senior,male,Moderate,0,0,obese,sedentary,10,marjaryasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+723,regular exercise,25,young_adult,male,Mild,0,0,normal,Moderate,20,sukhasana.jpg,bodyweight_squats.jpg,green_tea.jpg
+207,migraine,14,child,female,Moderate,0,0,normal,Moderate,15,sukhasana.jpg,gentle_stretching.jpg,chamomile_tea.jpg
+393,back pain,46,adult,other,Mild,0,0,underweight,active,10,trikonasana.jpg,tai_chi.jpg,warm_oil_massage.jpg
+398,back pain,22,young_adult,female,Moderate,0,0,overweight,Moderate,30,trikonasana.jpg,push_ups.jpg,coconut_oil.jpg
+679,joint pain,27,young_adult,other,Moderate,0,0,underweight,Moderate,15,pawanmuktasana.jpg,yoga_flow.jpg,turmeric_powder.jpg
+218,migraine,54,senior,other,Severe,0,0,underweight,Moderate,15,shavasana.jpg,gentle_stretching.jpg,green_tea.jpg
+5,stress,53,senior,female,Moderate,0,0,underweight,sedentary,45,pranayama.jpg,chair_exercises.jpg,turmeric_powder.jpg
+643,joint pain,53,senior,female,Mild,0,0,obese,active,10,marjaryasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+715,regular exercise,11,child,male,Mild,0,0,normal,active,30,sukhasana.jpg,cycling.jpg,ashwagandha_tea.jpg
+613,joint pain,22,young_adult,other,Moderate,0,0,normal,sedentary,20,cat_cow.jpg,tai_chi.jpg,turmeric_powder.jpg
+547,knee pain,38,adult,male,Moderate,0,0,underweight,active,10,marjaryasana.jpg,tai_chi.jpg,coconut_oil.jpg
+99,stress,53,senior,female,Severe,0,0,normal,Moderate,30,kapalbhati.jpg,walking.jpg,turmeric_powder.jpg
+574,joint pain,37,adult,male,Moderate,0,0,normal,Moderate,30,marjaryasana.jpg,stretching.jpg,turmeric_powder.jpg
+407,back pain,53,senior,other,Severe,0,0,normal,Moderate,10,marjaryasana.jpg,gentle_stretching.jpg,coconut_oil.jpg
+503,knee pain,51,senior,female,Severe,1,0,normal,active,15,cat_cow.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+48,stress,18,young_adult,male,Moderate,0,0,overweight,active,45,sukhasana.jpg,jogging.jpg,brahmi_powder.jpg
+33,stress,53,senior,male,Severe,0,0,normal,Moderate,60,balasana.jpg,walking.jpg,amla_juice.jpg
+201,migraine,54,senior,female,Mild,0,0,overweight,Moderate,45,pranayama.jpg,gentle_stretching.jpg,sesame_oil.jpg
+135,migraine,8,child,male,Moderate,1,0,normal,active,60,sukhasana.jpg,gentle_stretching.jpg,warm_oil_massage.jpg
+28,stress,12,child,other,Moderate,0,0,overweight,Moderate,15,pranayama.jpg,jogging.jpg,ginger_tea.jpg
+705,regular exercise,17,child,other,Mild,0,0,normal,sedentary,20,uttanasana.jpg,bodyweight_squats.jpg,turmeric_milk.jpg
+231,pcod,53,senior,female,Severe,0,0,normal,sedentary,45,malasana.jpg,gentle_stretching.jpg,triphala.jpg
+490,knee pain,54,senior,male,Moderate,0,0,overweight,sedentary,30,pawanmuktasana.jpg,water_aerobics.jpg,sesame_oil.jpg
+379,back pain,47,adult,male,Severe,0,0,underweight,Moderate,10,paschimottanasana.jpg,resistance_band.jpg,sesame_oil.jpg
+289,pcod,36,adult,female,Moderate,0,0,obese,sedentary,45,malasana.jpg,water_aerobics.jpg,ginger_tea.jpg
+419,back pain,10,child,other,Mild,0,0,underweight,Moderate,10,uttanasana.jpg,bodyweight_squats.jpg,coconut_oil.jpg
+675,joint pain,52,senior,male,Mild,0,0,normal,Moderate,30,virabhadrasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+392,back pain,47,adult,female,Moderate,0,1,obese,Moderate,60,ardha_matsyendrasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+593,joint pain,26,young_adult,other,Moderate,1,0,obese,Moderate,45,chaturanga.jpg,chair_exercises.jpg,turmeric_powder.jpg
+499,knee pain,35,young_adult,female,Mild,0,0,underweight,active,30,pawanmuktasana.jpg,walking.jpg,coconut_oil.jpg
+139,migraine,51,senior,female,Moderate,0,0,normal,active,15,bhramari.jpg,walking.jpg,warm_oil_massage.jpg
+63,stress,43,adult,other,Mild,0,0,underweight,Moderate,60,viparita_karani.jpg,brisk_walk.jpg,ginger_tea.jpg
+472,knee pain,7,child,male,Mild,0,0,normal,active,15,gomukhasana.jpg,stretching.jpg,coconut_oil.jpg
+648,joint pain,20,young_adult,female,Severe,0,0,overweight,Moderate,30,gomukhasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+129,migraine,47,adult,female,Moderate,0,0,normal,sedentary,45,shavasana.jpg,water_aerobics.jpg,green_tea.jpg
+777,regular exercise,16,child,female,Mild,0,0,overweight,active,20,navasana.jpg,swimming.jpg,chamomile_tea.jpg
+521,knee pain,28,young_adult,other,Moderate,0,0,overweight,sedentary,15,gomukhasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+65,stress,8,child,female,Moderate,0,0,normal,active,20,viparita_karani.jpg,swimming.jpg,ashwagandha_tea.jpg
+15,stress,6,child,male,Moderate,0,0,obese,active,45,pranayama.jpg,water_aerobics.jpg,triphala.jpg
+157,migraine,51,senior,other,Severe,0,1,obese,active,10,anulom_vilom.jpg,water_aerobics.jpg,coconut_oil.jpg
+41,stress,43,adult,other,Moderate,0,0,overweight,active,15,anulom_vilom.jpg,brisk_walk.jpg,turmeric_powder.jpg
+493,knee pain,46,adult,female,Mild,0,0,underweight,active,15,gomukhasana.jpg,walking.jpg,head_massage_oil.jpg
+380,back pain,12,child,other,Moderate,0,0,overweight,sedentary,45,ardha_matsyendrasana.jpg,push_ups.jpg,coconut_oil.jpg
+188,migraine,45,adult,other,Severe,0,0,underweight,active,20,shavasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+217,migraine,27,young_adult,other,Severe,0,0,overweight,sedentary,10,sukhasana.jpg,gentle_stretching.jpg,ashwagandha_tea.jpg
+53,stress,52,senior,female,Severe,0,0,normal,Moderate,60,kapalbhati.jpg,water_aerobics.jpg,turmeric_milk.jpg
+338,pcod,22,young_adult,female,Mild,0,0,normal,Moderate,10,baddha_konasana.jpg,cycling.jpg,fenugreek_seeds.jpg
+296,pcod,46,adult,female,Mild,0,0,normal,Moderate,30,supta_baddha_konasana.jpg,cycling.jpg,turmeric_milk.jpg
+702,regular exercise,18,young_adult,female,Mild,0,0,overweight,active,20,navasana.jpg,wall_push.jpg,chamomile_tea.jpg
+252,pcod,17,child,female,Moderate,0,0,underweight,active,20,malasana.jpg,brisk_walk.jpg,turmeric_milk.jpg
+462,knee pain,44,adult,other,Moderate,0,0,obese,active,15,gomukhasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+456,back pain,33,young_adult,male,Severe,0,0,overweight,Moderate,30,trikonasana.jpg,bodyweight_squats.jpg,coconut_oil.jpg
+796,regular exercise,51,senior,female,Mild,0,0,underweight,Moderate,15,shavasana.jpg,walking.jpg,ashwagandha_tea.jpg
+270,pcod,6,child,female,Severe,0,0,normal,Moderate,20,setu_bandhasana.jpg,brisk_walk.jpg,cinnamon_tea.jpg
+202,migraine,52,senior,female,Severe,0,1,overweight,active,15,shavasana.jpg,walking.jpg,sesame_oil.jpg
+162,migraine,39,adult,other,Mild,0,0,obese,sedentary,60,bhramari.jpg,gentle_stretching.jpg,turmeric_milk.jpg
+556,knee pain,22,young_adult,male,Severe,0,0,underweight,active,20,gomukhasana.jpg,tai_chi.jpg,head_massage_oil.jpg
+402,back pain,52,senior,female,Mild,0,0,normal,sedentary,10,pawanmuktasana.jpg,water_aerobics.jpg,head_massage_oil.jpg
+703,regular exercise,45,adult,other,Mild,0,0,normal,Moderate,60,virabhadrasana.jpg,resistance_band.jpg,chamomile_tea.jpg
+477,knee pain,26,young_adult,female,Mild,0,0,underweight,Moderate,15,pawanmuktasana.jpg,gentle_stretching.jpg,head_massage_oil.jpg
+106,stress,38,adult,other,Severe,0,0,normal,active,10,anulom_vilom.jpg,cycling.jpg,fenugreek_seeds.jpg
+566,knee pain,51,senior,female,Moderate,0,0,obese,Moderate,45,marjaryasana.jpg,walking.jpg,warm_oil_massage.jpg
+390,back pain,46,adult,other,Moderate,0,0,underweight,sedentary,60,paschimottanasana.jpg,wall_push.jpg,sesame_oil.jpg
+2,stress,53,senior,female,Moderate,0,0,overweight,Moderate,45,balasana.jpg,gentle_stretching.jpg,cinnamon_tea.jpg
+746,regular exercise,42,adult,other,Mild,0,1,normal,active,20,virabhadrasana.jpg,brisk_walk.jpg,chamomile_tea.jpg
+562,knee pain,24,young_adult,male,Mild,0,1,obese,Moderate,60,pawanmuktasana.jpg,gentle_stretching.jpg,sesame_oil.jpg
+81,stress,13,child,male,Moderate,1,0,underweight,sedentary,10,balasana.jpg,cycling.jpg,ginger_tea.jpg
+206,migraine,51,senior,other,Severe,0,0,normal,active,45,sukhasana.jpg,walking.jpg,coconut_oil.jpg
+35,stress,12,child,other,Moderate,0,0,obese,sedentary,60,kapalbhati.jpg,walking.jpg,ashwagandha_tea.jpg
+509,knee pain,16,child,other,Moderate,0,0,obese,active,45,cat_cow.jpg,gentle_stretching.jpg,sesame_oil.jpg
+428,back pain,48,adult,other,Moderate,0,0,normal,active,10,trikonasana.jpg,tai_chi.jpg,warm_oil_massage.jpg
+455,back pain,11,child,female,Moderate,0,0,overweight,Moderate,45,trikonasana.jpg,yoga_flow.jpg,head_massage_oil.jpg
+367,back pain,40,adult,other,Severe,0,0,normal,sedentary,20,cat_cow.jpg,stretching.jpg,coconut_oil.jpg
+92,stress,19,young_adult,female,Mild,0,0,overweight,sedentary,15,viparita_karani.jpg,brisk_walk.jpg,chamomile_tea.jpg
+340,pcod,43,adult,female,Moderate,0,0,overweight,Moderate,45,baddha_konasana.jpg,brisk_walk.jpg,fenugreek_seeds.jpg
+565,knee pain,16,child,other,Mild,0,0,obese,sedentary,30,pawanmuktasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+346,back pain,54,senior,other,Mild,0,0,overweight,sedentary,30,cat_cow.jpg,chair_exercises.jpg,head_massage_oil.jpg
+242,pcod,49,adult,female,Moderate,0,1,underweight,sedentary,60,supta_baddha_konasana.jpg,cycling.jpg,fenugreek_seeds.jpg
+14,stress,23,young_adult,female,Moderate,0,0,underweight,Moderate,15,anulom_vilom.jpg,brisk_walk.jpg,fenugreek_seeds.jpg
+316,pcod,24,young_adult,female,Mild,1,0,obese,active,15,baddha_konasana.jpg,water_aerobics.jpg,cinnamon_tea.jpg
+601,joint pain,22,young_adult,other,Mild,0,0,normal,sedentary,60,virabhadrasana.jpg,chair_exercises.jpg,turmeric_powder.jpg
+388,back pain,47,adult,other,Moderate,0,0,overweight,active,10,pawanmuktasana.jpg,resistance_band.jpg,warm_oil_massage.jpg
+274,pcod,22,young_adult,female,Moderate,0,0,overweight,active,60,baddha_konasana.jpg,jogging.jpg,green_tea.jpg
+167,migraine,52,senior,female,Severe,0,0,underweight,Moderate,10,shavasana.jpg,gentle_stretching.jpg,green_tea.jpg
+792,regular exercise,33,young_adult,other,Mild,1,0,overweight,active,15,chaturanga.jpg,swimming.jpg,green_tea.jpg
+647,joint pain,6,child,female,Mild,0,0,obese,sedentary,30,virabhadrasana.jpg,water_aerobics.jpg,turmeric_powder.jpg
+485,knee pain,26,young_adult,other,Severe,0,0,normal,active,60,gomukhasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+781,regular exercise,51,senior,female,Mild,0,0,normal,active,10,uttanasana.jpg,gentle_stretching.jpg,lavender_tea.jpg
+505,knee pain,10,child,other,Mild,0,0,obese,sedentary,10,pawanmuktasana.jpg,chair_exercises.jpg,head_massage_oil.jpg
+244,pcod,21,young_adult,female,Severe,0,0,overweight,active,20,setu_bandhasana.jpg,cycling.jpg,amla_juice.jpg
+567,knee pain,26,young_adult,male,Moderate,1,0,normal,sedentary,30,pawanmuktasana.jpg,pilates.jpg,sesame_oil.jpg
+563,knee pain,12,child,female,Mild,0,0,normal,sedentary,15,gomukhasana.jpg,yoga_flow.jpg,coconut_oil.jpg
+687,regular exercise,27,young_adult,other,Mild,0,0,obese,Moderate,20,ardha_matsyendrasana.jpg,water_aerobics.jpg,ashwagandha_tea.jpg
+190,migraine,6,child,female,Moderate,0,0,normal,sedentary,10,kapalbhati.jpg,chair_exercises.jpg,sesame_oil.jpg
+700,regular exercise,45,adult,other,Mild,0,0,obese,active,60,sukhasana.jpg,gentle_stretching.jpg,green_tea.jpg
+476,knee pain,39,adult,other,Moderate,0,0,obese,active,15,cat_cow.jpg,water_aerobics.jpg,head_massage_oil.jpg
+682,joint pain,6,child,male,Mild,0,0,obese,active,60,cat_cow.jpg,chair_exercises.jpg,brahmi_powder.jpg
+511,knee pain,53,senior,other,Moderate,1,0,obese,Moderate,10,marjaryasana.jpg,water_aerobics.jpg,warm_oil_massage.jpg
+59,stress,49,adult,other,Severe,0,0,normal,active,30,shavasana.jpg,jogging.jpg,turmeric_milk.jpg
+475,knee pain,47,adult,other,Moderate,0,0,overweight,Moderate,60,marjaryasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+561,knee pain,33,young_adult,female,Severe,0,0,normal,active,45,gomukhasana.jpg,yoga_flow.jpg,coconut_oil.jpg
+748,regular exercise,42,adult,other,Mild,0,0,normal,sedentary,15,uttanasana.jpg,brisk_walk.jpg,green_tea.jpg
+253,pcod,35,young_adult,female,Severe,1,0,overweight,active,15,baddha_konasana.jpg,cycling.jpg,ginger_tea.jpg
+22,stress,54,senior,male,Severe,0,0,underweight,active,15,shavasana.jpg,chair_exercises.jpg,ashwagandha_powder.jpg
+314,pcod,37,adult,female,Mild,0,0,underweight,sedentary,45,supta_baddha_konasana.jpg,cycling.jpg,triphala.jpg
+460,knee pain,52,senior,other,Severe,0,0,overweight,sedentary,20,marjaryasana.jpg,water_aerobics.jpg,coconut_oil.jpg
+161,migraine,17,child,other,Severe,0,0,obese,sedentary,45,kapalbhati.jpg,chair_exercises.jpg,green_tea.jpg
+277,pcod,53,senior,female,Mild,0,0,overweight,sedentary,10,malasana.jpg,chair_exercises.jpg,ginger_tea.jpg
+192,migraine,43,adult,male,Moderate,0,0,normal,sedentary,10,pranayama.jpg,chair_exercises.jpg,ginger_tea.jpg
+386,back pain,32,young_adult,female,Moderate,1,0,normal,Moderate,45,uttanasana.jpg,bodyweight_squats.jpg,head_massage_oil.jpg
+414,back pain,39,adult,other,Mild,0,0,overweight,active,30,uttanasana.jpg,resistance_band.jpg,coconut_oil.jpg
+492,knee pain,43,adult,female,Severe,0,0,underweight,sedentary,30,cat_cow.jpg,walking.jpg,coconut_oil.jpg
+344,back pain,12,child,other,Severe,0,0,obese,sedentary,45,marjaryasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+770,regular exercise,54,senior,male,Mild,0,0,normal,sedentary,20,shavasana.jpg,chair_exercises.jpg,green_tea.jpg
+309,pcod,22,young_adult,female,Severe,0,0,normal,sedentary,15,malasana.jpg,jogging.jpg,amla_juice.jpg
+662,joint pain,16,child,male,Severe,0,0,underweight,Moderate,60,cat_cow.jpg,pilates.jpg,turmeric_powder.jpg
+131,migraine,24,young_adult,female,Moderate,0,0,normal,Moderate,60,viparita_karani.jpg,walking.jpg,turmeric_milk.jpg
+664,joint pain,51,senior,female,Mild,1,1,underweight,Moderate,60,pawanmuktasana.jpg,chair_exercises.jpg,brahmi_powder.jpg
+100,stress,7,child,female,Moderate,0,0,obese,sedentary,30,balasana.jpg,water_aerobics.jpg,fenugreek_seeds.jpg
+373,back pain,53,senior,female,Severe,0,0,obese,sedentary,15,marjaryasana.jpg,chair_exercises.jpg,warm_oil_massage.jpg
+88,stress,16,child,male,Moderate,0,1,obese,active,20,balasana.jpg,walking.jpg,brahmi_powder.jpg
+459,knee pain,54,senior,male,Moderate,0,0,overweight,Moderate,15,pawanmuktasana.jpg,chair_exercises.jpg,sesame_oil.jpg
+331,pcod,17,child,female,Severe,1,0,normal,active,20,setu_bandhasana.jpg,swimming.jpg,chamomile_tea.jpg
+215,migraine,18,young_adult,female,Moderate,0,0,obese,active,60,viparita_karani.jpg,chair_exercises.jpg,coconut_oil.jpg
+467,knee pain,39,adult,female,Mild,0,0,overweight,sedentary,30,gomukhasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+122,migraine,45,adult,other,Mild,0,0,underweight,active,10,kapalbhati.jpg,gentle_stretching.jpg,coconut_oil.jpg
+615,joint pain,47,adult,female,Mild,0,0,overweight,active,45,pawanmuktasana.jpg,chair_exercises.jpg,coconut_oil.jpg
+21,stress,39,adult,male,Moderate,0,0,obese,active,60,shavasana.jpg,gentle_stretching.jpg,turmeric_powder.jpg
+701,regular exercise,17,child,female,Mild,0,0,normal,Moderate,10,balasana.jpg,cycling.jpg,turmeric_milk.jpg
+72,stress,17,child,other,Severe,0,0,normal,sedentary,60,shavasana.jpg,jogging.jpg,turmeric_powder.jpg
+107,stress,10,child,female,Severe,0,0,obese,active,20,anulom_vilom.jpg,gentle_stretching.jpg,ashwagandha_powder.jpg
+271,pcod,37,adult,female,Severe,0,0,obese,active,10,supta_baddha_konasana.jpg,gentle_stretching.jpg,ginger_tea.jpg
+436,back pain,42,adult,female,Severe,0,0,overweight,Moderate,10,gomukhasana.jpg,resistance_band.jpg,warm_oil_massage.jpg
+103,stress,51,senior,female,Severe,0,1,obese,sedentary,60,anulom_vilom.jpg,walking.jpg,brahmi_powder.jpg

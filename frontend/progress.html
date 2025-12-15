@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress - Swasthya AI</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #a8edea, #fed6e3);
+      text-align: center;
+      padding: 40px;
+    }
+
+    .card {
+      background: #fff;
+      width: 400px;
+      margin: auto;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Your Progress</h2>
+  <div class="card" id="progress"></div>
+
+  <script>
+    const API = "http://127.0.0.1:5001";
+    const session = JSON.parse(localStorage.getItem("wellness_session"));
+    const progressDiv = document.getElementById("progress");
+
+    if (!session) {
+      progressDiv.innerHTML = "<p>Please login first.</p>";
+    } else {
+      fetch(`${API}/api/history/${session.email}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            const total = data.records.length;
+            progressDiv.innerHTML = `
+              <h3>Total Sessions: ${total}</h3>
+              <p>Keep it up! 💪</p>
+            `;
+          }
+        });
+    }
+  </script>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+</body>
+
+</html>

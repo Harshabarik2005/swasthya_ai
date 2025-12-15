@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History - Swasthya AI</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/chatbot.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #a8edea, #fed6e3);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .history-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+  </style>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+</head>
+
+<body>
+  <!-- Language Selector -->
+  <div style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+    <select id="languageSelector" style="padding: 8px; border-radius: 15px; border: 1px solid #ccc; cursor: pointer;">
+      <option value="en">English 🇺🇸</option>
+      <option value="te">Telugu 🇮🇳</option>
+      <option value="kn">Kannada 🇮🇳</option>
+      <option value="hi">Hindi 🇮🇳</option>
+    </select>
+  </div>
+
+  <h2 data-i18n="history_title">Your Past Recommendations</h2>
+  <div id="historyContainer" data-i18n="loading_history">Loading...</div>
+
+  <script>
+    const API = "http://127.0.0.1:5001";
+    const session = JSON.parse(localStorage.getItem("wellness_session"));
+    const container = document.getElementById("historyContainer");
+
+    function getTrans(key) {
+      const lang = localStorage.getItem('wellness_lang') || 'en';
+      if (translations[lang] && translations[lang][key]) {
+        return translations[lang][key];
+      }
+      return key;
+    }
+
+    function loadHistory() {
+      if (!session) {
+        container.innerHTML = "<p>Please login first.</p>";
+      } else {
+        fetch(`${API}/api/history/${session.email}`)
+          .then(res => res.json())
+          .then(data => {
+            if (data.success && data.records.length > 0) {
+              container.innerHTML = data.records.map(r => `
+                  <div class="history-card">
+                    <h3>${r.condition}</h3>
+                    <p><b>${getTrans('history_severity')}</b> ${r.severity}</p>
+                    <p><b>${getTrans('history_yoga')}</b> ${r.yogapose}</p>
+                    <p><b>${getTrans('history_exercise')}</b> ${r.exercise}</p>
+                    <p><b>${getTrans('history_ayurveda')}</b> ${r.ayurveda_tip}</p>
+                    <p><b>${getTrans('history_date')}</b> ${new Date(r.created_at).toLocaleString()}</p>
+                  </div>
+                `).join("");
+            } else {
+              container.innerHTML = `<p>${getTrans('no_records')}</p>`;
+            }
+          })
+          .catch(() => {
+            container.innerHTML = `<p>${getTrans('error_history')}</p>`;
+          });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadHistory);
+    window.addEventListener('languageChanged', loadHistory);
+  </script>
+  <script src="js/chatbot.js"></script>
+</body>
+
+</html>

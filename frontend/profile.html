@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Swasthya AI</title>
+  <meta name="description" content="View your wellness profile">
+  <link rel="stylesheet" href="styles/modern-design-system.css">
+  <link rel="stylesheet" href="styles/chatbot.css">
+  <style>
+    body {
+      background: var(--bg-gradient-2);
+      min-height: 100vh;
+      padding: var(--space-6) var(--space-4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-wrapper {
+      max-width: 600px;
+      width: 100%;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--neutral-600);
+      text-decoration: none;
+      margin-bottom: var(--space-6);
+      font-weight: 500;
+      transition: color var(--transition-base);
+    }
+
+    .back-link:hover {
+      color: var(--primary);
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .profile-title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-2);
+      font-weight: 700;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-2xl);
+      animation: scaleIn 0.5s ease-out;
+    }
+
+    .profile-avatar {
+      width: 120px;
+      height: 120px;
+      background: var(--primary-gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-5xl);
+      margin: 0 auto var(--space-6);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .info-item {
+      display: flex;
+      padding: var(--space-4);
+      background: var(--neutral-50);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-base);
+    }
+
+    .info-item:hover {
+      background: var(--neutral-100);
+      transform: translateX(4px);
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: var(--neutral-600);
+      min-width: 140px;
+      font-size: var(--text-sm);
+    }
+
+    .info-value {
+      color: var(--neutral-800);
+      font-weight: 500;
+      flex: 1;
+    }
+
+    .loading {
+      text-align: center;
+      color: var(--neutral-500);
+      padding: var(--space-8);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Language Selector -->
+  <div style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+    <select id="languageSelector" style="padding: 8px; border-radius: 15px; border: 1px solid #ccc; cursor: pointer;">
+      <option value="en">English 🇺🇸</option>
+      <option value="te">Telugu 🇮🇳</option>
+      <option value="kn">Kannada 🇮🇳</option>
+      <option value="hi">Hindi 🇮🇳</option>
+    </select>
+  </div>
+
+  <div class="profile-wrapper">
+    <a href="dashboard.html" class="back-link" data-i18n="back_dashboard">
+      ← Back to Dashboard
+    </a>
+
+    <div class="profile-header">
+      <h1 class="profile-title" data-i18n="profile_title">Your Profile</h1>
+    </div>
+
+    <div class="profile-card" id="profile">
+      <div class="loading" data-i18n="loading_profile">Loading your profile...</div>
+    </div>
+  </div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+  <script>
+    const API = "http://127.0.0.1:5001";
+    const session = JSON.parse(localStorage.getItem("wellness_session"));
+    const profileDiv = document.getElementById("profile");
+
+
+
+    // Translation helper
+    function getTrans(key) {
+      const lang = localStorage.getItem('wellness_lang') || 'en';
+      if (translations[lang] && translations[lang][key]) {
+        return translations[lang][key];
+      }
+      return key;
+    }
+
+    // Override loadProfile to use translations
+    async function loadProfile() {
+      if (!session) {
+        profileDiv.innerHTML = "<p class='loading'>Please login first.</p>";
+        setTimeout(() => window.location.href = "auth.html", 2000);
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API}/api/user/${session.email}`);
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          const user = json.user;
+
+          let conditionsHtml = "None";
+          const allConditions = [];
+
+          const conditionMap = {
+            "bp": "Blood Pressure",
+            "diabetes": "Diabetes"
+          };
+
+          if (user.conditions && user.conditions.length > 0) {
+            user.conditions.forEach(c => {
+              allConditions.push(conditionMap[c] || c);
+            });
+          }
+          if (user.other_conditions && user.other_conditions.length > 0) {
+            allConditions.push(...user.other_conditions);
+          }
+
+          if (allConditions.length > 0) {
+            conditionsHtml = allConditions.join(", ");
+          }
+
+          let extraInfoHtml = "";
+          if (user.gender === "female") {
+            if (user.recent_pregnancy || user.pcod) {
+              const femaleInfo = [];
+              if (user.recent_pregnancy) femaleInfo.push("Recent Pregnancy");
+              if (user.pcod) femaleInfo.push("PCOS");
+              extraInfoHtml = `
+                  <div class="info-item">
+                    <span class="info-label">${getTrans('profile_additional_info')}</span>
+                    <span class="info-value">${femaleInfo.join(", ")}</span>
+                  </div>
+                `;
+            }
+          }
+
+          // Translate Gender and BMI Category if possible
+          const genderKey = `gender_${user.gender.toLowerCase()}`;
+          const displayGender = translations[localStorage.getItem('wellness_lang') || 'en'][genderKey] || user.gender;
+
+          profileDiv.innerHTML = `
+              <div class="profile-avatar">👤</div>
+              
+              <div class="profile-info">
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_name')}</span>
+                  <span class="info-value">${user.name}</span>
+                </div>
+                
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_email')}</span>
+                  <span class="info-value">${user.email}</span>
+                </div>
+                
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_age')}</span>
+                  <span class="info-value">${user.age} years</span>
+                </div>
+                
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_gender')}</span>
+                  <span class="info-value">${displayGender.charAt(0).toUpperCase() + displayGender.slice(1)}</span>
+                </div>
+                
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_blood_group')}</span>
+                  <span class="info-value">${user.blood_group}</span>
+                </div>
+
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_height')}</span>
+                  <span class="info-value">${user.height ? user.height + ' cm' : 'Not provided'}</span>
+                </div>
+
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_weight')}</span>
+                  <span class="info-value">${user.weight ? user.weight + ' kg' : 'Not provided'}</span>
+                </div>
+
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_bmi')}</span>
+                  <span class="info-value">${user.bmi ? user.bmi : 'Not calculated'}</span>
+                </div>
+
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_bmi_category')}</span>
+                  <span class="info-value">${user.bmi_category ? user.bmi_category.charAt(0).toUpperCase() + user.bmi_category.slice(1) : 'Not available'}</span>
+                </div>
+
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_activity_level')}</span>
+                  <span class="info-value">${user.activity_level ? user.activity_level.charAt(0).toUpperCase() + user.activity_level.slice(1) : 'Not provided'}</span>
+                </div>
+                
+                <div class="info-item">
+                  <span class="info-label">${getTrans('profile_health_conditions')}</span>
+                  <span class="info-value">${conditionsHtml}</span>
+                </div>
+                
+                ${extraInfoHtml}
+              </div>
+            `;
+        } else {
+          profileDiv.innerHTML = "<p class='loading'>Failed to load profile data.</p>";
+        }
+      } catch (err) {
+        console.error("Error loading profile:", err);
+        profileDiv.innerHTML = "<p class='loading'>Error connecting to server.</p>";
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', loadProfile);
+    window.addEventListener('languageChanged', loadProfile);
+  </script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/notification_service.js"></script>
+</body>
+
+</html>

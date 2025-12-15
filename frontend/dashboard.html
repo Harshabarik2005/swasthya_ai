@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Swasthya AI</title>
+  <meta name="description" content="Your personal wellness dashboard">
+  <link rel="stylesheet" href="styles/modern-design-system.css">
+  <link rel="stylesheet" href="styles/chatbot.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: var(--bg-gradient-2);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header / Navigation */
+    .dashboard-header {
+      background: white;
+      box-shadow: var(--shadow-md);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: slideDown 0.5s ease-out;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-4) var(--space-6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-6);
+    }
+
+    .dashboard-logo {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .dashboard-nav {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+    }
+
+    .nav-link {
+      color: var(--neutral-600);
+      font-weight: 500;
+      font-size: var(--text-base);
+      text-decoration: none;
+      transition: color var(--transition-base);
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width var(--transition-base);
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .logout-btn {
+      padding: var(--space-2) var(--space-5);
+      background: var(--primary-gradient);
+      color: white;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      text-decoration: none;
+      transition: all var(--transition-base);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .logout-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Main Content */
+    .dashboard-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-8) var(--space-6);
+      flex: 1;
+      width: 100%;
+    }
+
+    .welcome-section {
+      text-align: center;
+      margin-bottom: var(--space-10);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .welcome-title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-2);
+      font-weight: 700;
+    }
+
+    .welcome-subtitle {
+      color: var(--neutral-600);
+      font-size: var(--text-lg);
+    }
+
+    /* Stats Section */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-6);
+      margin-bottom: var(--space-10);
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-6);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      transition: all var(--transition-base);
+      position: relative;
+      overflow: hidden;
+      animation: slideUp 0.6s ease-out;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary-gradient);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-2xl);
+    }
+
+    .stat-card.stagger-1 {
+      animation-delay: 0.1s;
+    }
+
+    .stat-card.stagger-2 {
+      animation-delay: 0.2s;
+    }
+
+    .stat-card.stagger-3 {
+      animation-delay: 0.3s;
+    }
+
+    .stat-icon {
+      font-size: var(--text-4xl);
+      margin-bottom: var(--space-3);
+    }
+
+    .stat-label {
+      font-size: var(--text-base);
+      color: var(--neutral-600);
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+    }
+
+    .stat-value {
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--primary);
+      font-family: var(--font-display);
+    }
+
+    /* Graph Section (New) */
+    .graph-section {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-10);
+      box-shadow: var(--shadow-lg);
+      animation: slideUp 0.6s ease-out 0.2s backwards;
+    }
+
+    .graph-header {
+      margin-bottom: var(--space-4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .graph-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--neutral-800);
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-6);
+      margin-bottom: var(--space-6);
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      transition: all var(--transition-base);
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+      animation: slideUp 0.7s ease-out;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--primary-gradient);
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+
+    .feature-card:hover::before {
+      opacity: 0.05;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-2xl);
+    }
+
+    .feature-card.stagger-1 {
+      animation-delay: 0.1s;
+    }
+
+    .feature-card.stagger-2 {
+      animation-delay: 0.2s;
+    }
+
+    .feature-card.stagger-3 {
+      animation-delay: 0.3s;
+    }
+
+    .feature-card.stagger-4 {
+      animation-delay: 0.4s;
+    }
+
+    .feature-card.stagger-5 {
+      animation-delay: 0.5s;
+    }
+
+    .feature-icon {
+      font-size: var(--text-5xl);
+      margin-bottom: var(--space-4);
+      transition: transform var(--transition-base);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .feature-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--neutral-800);
+      margin-bottom: var(--space-3);
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-description {
+      color: var(--neutral-600);
+      font-size: var(--text-sm);
+      line-height: 1.6;
+      margin-bottom: var(--space-4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-action {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Footer */
+    .dashboard-footer {
+      text-align: center;
+      padding: var(--space-6);
+      color: var(--neutral-500);
+      font-size: var(--text-sm);
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: var(--text-2xl);
+      cursor: pointer;
+      color: var(--neutral-700);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .dashboard-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: var(--space-4);
+        box-shadow: var(--shadow-lg);
+        gap: var(--space-3);
+      }
+
+      .dashboard-nav.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .welcome-title {
+        font-size: var(--text-3xl);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-content">
+      <div class="dashboard-logo">
+        <span>🌿</span>
+        <span data-i18n="app_title">Swasthya AI</span>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+      <nav class="dashboard-nav" id="dashboardNav">
+        <!-- Language Selector for Dashboard -->
+        <select id="languageSelector" style="padding: 5px; border-radius: 10px; border: 1px solid #ccc;">
+          <option value="en">English</option>
+          <option value="te">Telugu</option>
+          <option value="kn">Kannada</option>
+          <option value="hi">Hindi</option>
+        </select>
+
+        <a href="dashboard.html" class="nav-link" data-i18n="dashboard_home">Home</a>
+        <a href="profile.html" class="nav-link" data-i18n="dashboard_profile">Profile</a>
+        <a href="history.html" class="nav-link" data-i18n="dashboard_history">History</a>
+        <a href="index.html" class="logout-btn" data-i18n="dashboard_logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <section class="welcome-section">
+      <h1 class="welcome-title" data-i18n="welcome_user">Welcome back to your Wellness Space 🌸</h1>
+      <p class="welcome-subtitle" data-i18n="welcome_subtitle">Your journey to holistic health continues here</p>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-grid">
+      <div class="stat-card stagger-1">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-label" data-i18n="stats_streak">Current Streak</div>
+        <div id="currentStreak" class="stat-value">0 days</div>
+      </div>
+
+      <div class="stat-card stagger-2">
+        <div class="stat-icon">📊</div>
+        <div class="stat-label" data-i18n="stats_sessions">Total Sessions</div>
+        <div id="totalSessions" class="stat-value">0</div>
+      </div>
+
+      <div class="stat-card stagger-3">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-label" data-i18n="stats_longest">Longest Streak</div>
+        <div id="longestStreak" class="stat-value">0 days</div>
+      </div>
+    </section>
+
+
+
+    <!-- Features Grid -->
+    <section class="features-grid">
+      <a href="recommendations.html" class="feature-card stagger-1">
+        <div class="feature-icon">🧘</div>
+        <h3 class="feature-title" data-i18n="feat_rec_title">Get Recommendations</h3>
+        <p class="feature-description" data-i18n="feat_rec_desc">
+          Receive personalized Yoga, Exercise, and Ayurveda tips based on your health data
+        </p>
+        <span class="feature-action" data-i18n="feat_rec_btn">Start Now →</span>
+      </a>
+
+      <a href="profile.html" class="feature-card stagger-2">
+        <div class="feature-icon">👤</div>
+        <h3 class="feature-title" data-i18n="feat_prof_title">View Profile</h3>
+        <p class="feature-description" data-i18n="feat_prof_desc">
+          Check your stored wellness details, age, conditions, and preferences
+        </p>
+        <span class="feature-action" data-i18n="feat_prof_btn">View Profile →</span>
+      </a>
+
+      <a href="history.html" class="feature-card stagger-3">
+        <div class="feature-icon">📖</div>
+        <h3 class="feature-title" data-i18n="feat_hist_title">History & Progress</h3>
+        <p class="feature-description" data-i18n="feat_hist_desc">
+          Track your completed sessions and improvement streaks over time
+        </p>
+        <span class="feature-action" data-i18n="feat_hist_btn">Check History →</span>
+      </a>
+
+      <a href="reminders.html" class="feature-card stagger-4">
+        <div class="feature-icon">⏰</div>
+        <h3 class="feature-title" data-i18n="feat_rem_title">Set Reminders</h3>
+        <p class="feature-description" data-i18n="feat_rem_desc">
+          Stay consistent by setting daily reminders for wellness sessions
+        </p>
+        <span class="feature-action" data-i18n="feat_rem_btn">Set Reminders →</span>
+      </a>
+    </section>
+
+
+    <!-- Graph Section -->
+    <section class="graph-section">
+      <div class="graph-header">
+        <h3 class="graph-title">Community Health Insights</h3>
+      </div>
+      <div style="position: relative; height: 300px; width: 100%;">
+        <canvas id="conditionsChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="dashboard-footer">
+    <p data-i18n="footer_text">&copy; 2025 Swasthya AI Wellness | All Rights Reserved</p>
+  </footer>
+
+  <!-- Stats Script -->
+  <script>
+    const API = "http://127.0.0.1:5001";
+    const session = JSON.parse(localStorage.getItem("wellness_session"));
+
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('dashboardNav').classList.toggle('active');
+    });
+
+    // Load stats
+    async function loadStats() {
+      if (!session) return;
+
+      try {
+        const res = await fetch(`${API}/api/stats/${session.email}`);
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById("currentStreak").textContent = `${data.current_streak} days`;
+          document.getElementById("totalSessions").textContent = data.total_sessions;
+          document.getElementById("longestStreak").textContent = `${data.longest_streak} days`;
+        }
+      } catch (err) {
+        console.error("Error loading stats:", err);
+      }
+    }
+
+    // Load Condition Graph
+    async function loadConditionGraph() {
+      try {
+        const res = await fetch(`${API}/api/stats/conditions`);
+        const json = await res.json();
+
+        if (json.success) {
+          const ctx = document.getElementById('conditionsChart').getContext('2d');
+          const conditions = Object.keys(json.data);
+          const counts = Object.values(json.data);
+
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: conditions,
+              datasets: [{
+                label: 'Users with Condition',
+                data: counts,
+                backgroundColor: 'rgba(0, 166, 126, 0.6)',
+                borderColor: 'rgba(0, 166, 126, 1)',
+                borderWidth: 1,
+                borderRadius: 8,
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                title: {
+                  display: false,
+                  text: 'Health Conditions Overview'
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  grid: { color: 'rgba(0,0,0,0.05)' }
+                },
+                x: {
+                  grid: { display: false }
+                }
+              }
+            }
+          });
+        }
+      } catch (err) {
+        console.error("Error loading graph:", err);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadStats();
+      loadConditionGraph();
+    });
+  </script>
+
+  <!-- Chatbot Script -->
+  <script src="js/chatbot.js"></script>
+  <!-- Global Notifications -->
+  <script src="js/notification_service.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+</body>
+
+</html>

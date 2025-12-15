@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In - Swasthya AI</title>
+  <meta name="description" content="Sign in to your Swasthya AI wellness account">
+  <link rel="stylesheet" href="styles/modern-design-system.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg,
+          hsl(220, 70%, 92%) 0%,
+          hsl(160, 60%, 88%) 50%,
+          hsl(174, 60%, 90%) 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      padding: var(--space-6);
+    }
+
+    .auth-container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-2xl);
+      width: 100%;
+      max-width: 440px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      animation: scaleIn 0.5s ease-out;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .auth-logo {
+      font-size: var(--text-5xl);
+      margin-bottom: var(--space-3);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .auth-title {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      color: var(--neutral-800);
+      margin-bottom: var(--space-2);
+      font-weight: 700;
+    }
+
+    .auth-subtitle {
+      color: var(--neutral-500);
+      font-size: var(--text-sm);
+    }
+
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      color: var(--neutral-700);
+      margin-bottom: var(--space-2);
+      font-size: var(--text-sm);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--text-base);
+      border: 2px solid var(--neutral-300);
+      border-radius: var(--radius-lg);
+      background: white;
+      transition: all var(--transition-base);
+      outline: none;
+      font-family: var(--font-primary);
+    }
+
+    .form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: var(--space-3);
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: var(--text-xl);
+      cursor: pointer;
+      padding: var(--space-2);
+      transition: transform var(--transition-fast);
+      width: auto;
+    }
+
+    .toggle-password:hover {
+      transform: translateY(-50%) scale(1.1);
+      background: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: var(--space-4);
+      background: var(--primary-gradient);
+      color: white;
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: var(--text-base);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .submit-btn:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl), var(--shadow-glow);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: var(--space-6);
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--neutral-200);
+    }
+
+    .auth-footer-text {
+      color: var(--neutral-600);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-2);
+    }
+
+    .auth-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .auth-link:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: var(--space-4);
+      color: var(--neutral-500);
+      font-size: var(--text-sm);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .back-home:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 640px) {
+      .auth-container {
+        padding: var(--space-6) var(--space-4);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="auth-container">
+    <div style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+      <select id="languageSelector" style="padding: 8px; border-radius: 15px; border: 1px solid #ccc; cursor: pointer;">
+        <option value="en">English 🇺🇸</option>
+        <option value="te">Telugu 🇮🇳</option>
+        <option value="kn">Kannada 🇮🇳</option>
+        <option value="hi">Hindi 🇮🇳</option>
+      </select>
+    </div>
+    <div class="auth-header">
+      <div class="auth-logo">🌿</div>
+      <h2 class="auth-title" data-i18n="auth_welcome_back">Welcome Back</h2>
+      <p class="auth-subtitle" data-i18n="auth_welcome_subtitle">Sign in to continue your wellness journey</p>
+    </div>
+
+    <form id="loginForm" class="auth-form">
+      <div class="form-group">
+        <label for="email" class="form-label" data-i18n="email_label">Email Address</label>
+        <input type="email" id="email" class="form-input" placeholder="your.email@example.com"
+          data-i18n="email_placeholder" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label" data-i18n="password_label">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" class="form-input" placeholder="Enter your password"
+            data-i18n="password_placeholder" required autocomplete="current-password">
+          <button type="button" id="togglePassword" class="toggle-password">👁️</button>
+        </div>
+        <div style="text-align: right; margin-top: 5px;">
+          <a href="forgot-password.html" style="font-size: 0.9em; color: var(--primary); text-decoration: none;"
+            data-i18n="forgot_password">Forgot Password?</a>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" data-i18n="sign_in">
+        Sign In
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      <p class="auth-footer-text">
+        <span data-i18n="dont_have_account">Don't have an account?</span>
+        <a href="get-started.html" class="auth-link" data-i18n="create_one">Create one</a>
+      </p>
+      <a href="index.html" class="back-home" data-i18n="back_home">← Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    const API = "http://127.0.0.1:5001";
+
+    // Password visibility toggle
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      togglePassword.textContent = type === 'password' ? '👁️' : '🙈';
+    });
+
+    // Login form handler
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Signing in...';
+      submitBtn.disabled = true;
+
+      const data = {
+        email: document.getElementById("email").value.trim(),
+        password: document.getElementById("password").value.trim()
+      };
+
+      try {
+        const res = await fetch(`${API}/api/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const json = await res.json();
+        if (res.ok && json.success) {
+          // Store session in localStorage
+          localStorage.setItem("wellness_session", JSON.stringify(json.user));
+
+          // Show success
+          submitBtn.textContent = '✓ Success!';
+          submitBtn.style.background = 'linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 76%, 26%))';
+
+          // Redirect after short delay
+          setTimeout(() => {
+            window.location.href = "dashboard.html";
+          }, 500);
+        } else {
+          alert(json.error || "Invalid credentials. Please try again.");
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Server error. Ensure Flask backend is running.");
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+  <script src="js/translations.js"></script>
+  <script src="js/language-manager.js"></script>
+</body>
+
+</html>
