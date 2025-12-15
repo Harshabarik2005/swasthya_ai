@@ -1,6 +1,6 @@
 # 🌿 Swasthya AI - Holistic Wellness Companion
 
-![Swasthya AI Banner](frontend/images/yoga_flow.jpg)
+
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Flask](https://img.shields.io/badge/Flask-2.0%2B-green)
