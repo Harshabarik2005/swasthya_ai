@@ -4,7 +4,7 @@ class WellnessChatbot {
     this.isOpen = false;
     this.messages = [];
     this.userData = null;
-    this.API = "http://127.0.0.1:5001";
+    this.API = ""; // Relative path for production
     this.init();
   }
 
